@@ -17,7 +17,7 @@
     {{ block "header" . }}{{ end }}
     <main
       role="main"
-      class="min-h-screen max-w-7xl py-8 mx-auto {{ block `main-classes` . }}
+      class="min-h-screen {{ block `main-classes` . }}
       {{ end }} bg-gray-50">
       {{ block "main" . }}{{ end }}
     </main>

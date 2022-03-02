@@ -1,15 +1,33 @@
-<div class="font-mono relative bg-steel-500 text-gray-400" id="{{.Get "file" | urlize}}">
-	{{- with .Get "file" -}}
-		<div class="filename san-serif text-sm inline-block leading-none pl-2 py-2">{{.}}</div>
-	{{- end -}}
+{{ $codeLang := "go-html-template" }}
+<div
+  class="font-mono relative bg-gray-300 text-gray-500"
+  id="{{ .Get "file" | urlize }}">
+  {{- with .Get "file" -}}
+    <div class="filename san-serif text-sm inline-block leading-none pl-2 py-3">
+      {{ . }}
+    </div>
+  {{- end -}}
 
-	{{ if ne (.Get "copy") "false" }}
-		<button class="needs-js copy bg-accent-color-dark text-sm absolute top-0 right-0 leading-none hover-bg-primary-color-dark border-0 border-none text-white px-3 py-2" title="Copy this font-mono to your clipboard." data-clipboard-action="copy" aria-label="copy button">
-		</button>
-		{{/* Functionality located within filesaver.js The copy here is located in the css with .copy class so it can be replaced with JS on success */}}
-	{{end}}
-	<div class="code-copy-content nt3" {{with .Get "download"}}id="{{.}}"{{end}}>
-		{{- .Inner -}}
-	</div>
-
+  {{ if ne (.Get "copy") "false" }}
+    <button
+      class="needs-js copy bg-accent-color-dark text-sm absolute top-0 right-0 leading-none hover-bg-primary-color-dark border-0 border-none text-white px-3 py-2"
+      title="Copy this to your clipboard."
+      data-clipboard-action="copy"
+      aria-label="copy button"></button>
+    {{/* TODO(bep) copy etc. */}}
+  {{ end }}
+  <div
+    class="code code-copy-content"
+    {{ with .Get "download" }}id="{{ . }}"{{ end }}>
+    {{ $inner := trim .Inner "\n" | safeHTML }}
+    {{ if .Get "nocode" }}
+      {{ $inner }}
+    {{ else }}
+      {{ with $codeLang }}
+        {{ highlight $inner . "" }}
+      {{ else }}
+        <pre><code>{{ $inner }}</code></pre>
+      {{ end }}
+    {{ end }}
+  </div>
 </div>

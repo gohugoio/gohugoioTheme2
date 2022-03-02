@@ -23,6 +23,13 @@ disableAliases = true
 # Used by PurgeCSS
 writeStats = true
 
+
+# Make the categories listing share the layouts from documentation.
+[[cascade]]
+type = 'documentation'
+[cascade._target]
+path = '/categories/**'
+
 [markup]
 [markup.highlight]
 style = "trac"
@@ -119,6 +126,18 @@ weight = 100
 name  = "date"
 weight = 10
 pattern = "2006"
+
+
+[security]
+enableInlineShortcodes = false
+[security.exec]
+allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
+osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+[security.funcs]
+getenv = "^(HUGO_|REPOSITORY_URL|^BRANCH$)"
+[security.http]
+methods = ['(?i)GET|POST']
+urls = ['.*']
 
 
 ## Image configuration.

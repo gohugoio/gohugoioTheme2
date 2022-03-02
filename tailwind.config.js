@@ -308,6 +308,7 @@ module.exports = {
               paddingRight: "1em",
               paddingBottom: "1em",
               paddingLeft: "1em",
+              borderRadius: rem(3),
             },
             ol: {
               marginTop: "1em",

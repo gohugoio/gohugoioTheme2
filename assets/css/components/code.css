@@ -24,8 +24,8 @@ pre,
   overflow: scroll;
 }
 
-.code-toggle pre,
-.code-toggle .chroma {
+.code pre,
+.code .chroma {
   border: none;
   margin: 0;
 }
