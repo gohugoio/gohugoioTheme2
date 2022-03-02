@@ -1,0 +1,26 @@
+{
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {
+      "@tailwindcss/typography": "github.com/gohugoio/gohugoioTheme2",
+      "autoprefixer": "github.com/gohugoio/gohugoioTheme2",
+      "nightwind": "github.com/gohugoio/gohugoioTheme2",
+      "postcss": "github.com/gohugoio/gohugoioTheme2",
+      "postcss-cli": "github.com/gohugoio/gohugoioTheme2",
+      "postcss-purgecss": "github.com/gohugoio/gohugoioTheme2",
+      "tailwindcss": "github.com/gohugoio/gohugoioTheme2"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.3.0",
+    "autoprefixer": "^10.0.4",
+    "nightwind": "^1.1.7",
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.0.0",
+    "postcss-purgecss": "^2.0.3",
+    "tailwindcss": "^2.0.3"
+  },
+  "name": "exampleSite",
+  "version": "0.1.0"
+}
