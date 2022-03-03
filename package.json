@@ -11,7 +11,7 @@
 		"postcss": "^8.1.10",
 		"postcss-cli": "^8.0.0",
 		"postcss-purgecss": "^2.0.3",
-		"tailwindcss": "^2.0.3"
+		"tailwindcss": "^3.0.23"
 	},
 	"name": "hugo-starter-tailwind-basic",
 	"version": "0.1.0"
