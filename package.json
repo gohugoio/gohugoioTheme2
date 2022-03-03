@@ -9,7 +9,7 @@
 		"autoprefixer": "^10.0.4",
 		"nightwind": "^1.1.7",
 		"postcss": "^8.1.10",
-		"postcss-cli": "^8.0.0",
+		"postcss-cli": "^9.1.0",
 		"postcss-purgecss": "^2.0.3",
 		"tailwindcss": "^2.0.3"
 	},
