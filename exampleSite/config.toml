@@ -9,6 +9,7 @@ footnotereturnlinkcontents = "↩"
 languageCode = "en-us"
 title = "Hugo"
 
+
 # Error configuration.
 refLinksErrorLevel = "WARNING"
 ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
@@ -22,6 +23,10 @@ disableAliases = true
 [build]
 # Used by PurgeCSS
 writeStats = true
+
+[params]
+ghrepo = "https://github.com/gohugoio/hugoDocs/"
+    
 
 
 # Make the categories listing share the layouts from documentation.

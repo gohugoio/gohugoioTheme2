@@ -9,9 +9,7 @@
       {
         "files": ["*.js", "*.ts"],
         "options": {
-          "useTabs": true,
           "printWidth": 120,
-          "singleQuote": true,
           "spaceBeforeFunctionParen": false
         }
       }
