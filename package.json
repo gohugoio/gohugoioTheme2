@@ -5,7 +5,7 @@
 		"url": "https://github.com/bep/hugo-starter-tailwind-basic.git"
 	},
 	"devDependencies": {
-		"@tailwindcss/typography": "^0.3.0",
+		"@tailwindcss/typography": "^0.5.2",
 		"autoprefixer": "^10.0.4",
 		"nightwind": "^1.1.7",
 		"postcss": "^8.1.10",
