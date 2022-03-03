@@ -29,4 +29,28 @@
 
   {{- partial "docs/functions-signature.html" . -}}
   {{ .Content }}
+
+
+  <hr />
+  {{ with .File }}
+    <div class="mt-8">
+      <a
+        href="{{ path.Join site.Params.ghrepo `edit/master/content` .Lang .Path }}"
+        class="inline-flex items-center">
+        <span class="mr-2">Edit this file on GitHub</span>
+        {{ partial "svg/link-ext.svg" (dict "fill" "#333" "size" "14") }}
+      </a>
+    </div>
+  {{ end }}
+
+
+  <div class="mt-4 text-gray-300 text-sm">
+    Last updated:
+    {{ .Lastmod.Format "January 2, 2006" }}{{ with .GitInfo }}
+      :
+      <a href="{{ site.Params.ghrepo }}commit/{{ .Hash }}"
+        >{{ .Subject }} ({{ .AbbreviatedHash }})</a
+      >
+    {{ end }}
+  </div>
 </div>

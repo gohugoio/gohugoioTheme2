@@ -76,7 +76,7 @@ body {
     }
 
     a {
-        @apply text-steel-700 hover:text-steel-500 no-underline;
+        @apply text-blue-700 hover:text-steel-500 no-underline;
     }
 
     .dark a {
