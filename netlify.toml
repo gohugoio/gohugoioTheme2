@@ -4,18 +4,18 @@ command = "hugo --gc --minify"
 ignore = "/bin/false"
 
 [context.production.environment]
-HUGO_VERSION = "0.93.1"
+HUGO_VERSION = "0.98.0"
 
 [context.deploy-preview]
 command = "hugo --minify -D -F -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-HUGO_VERSION = "0.93.1"
+HUGO_VERSION = "0.98.0"
 
 [context.branch-deploy]
 command = "hugo --minify --gc -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
-HUGO_VERSION = "0.93.1"
+HUGO_VERSION = "0.98.0"
 
 

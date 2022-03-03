@@ -9,13 +9,14 @@
   {{/* TODO1 self host https://fonts.google.com/specimen/Mulish?preview.text_type=custom */}}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,700;1,500;1,700&display=swap"
     rel="stylesheet" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
   <title>
     {{ block "title" . }}
-      {{ with .Title }}{{ . }} |{{ end }}{{ .Site.Title }}
+      {{ with .Title }}{{ . }} |{{ end }}
+      {{ .Site.Title }}
     {{ end }}
   </title>
 
@@ -55,6 +56,10 @@
       crossorigin="anonymous" />
   {{ end }}
 
+  {{/* TODO1 remove */}}
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css" />
 
   <style>
     [x-cloak] {

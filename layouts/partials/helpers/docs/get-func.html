@@ -1,0 +1,9 @@
+{{ $all := index  site.Data.docs.tpl "funcs" }}
+{{ $parts := split . "." }}
+{{ $func := "" }}
+{{ if eq (len $parts) 2 }}
+  {{ $funcs := index $all (index $parts 0) }}
+  {{ $func = index $funcs (index $parts 1) }}
+{{ end }}
+
+{{ return $func }}

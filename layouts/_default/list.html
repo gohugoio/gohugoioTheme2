@@ -1,20 +1,16 @@
 {{ define "main" }}
-  {{ $pages := "" }}
-  {{ if .Parent.IsHome }}
-    {{/* /documentation root: Show all pages in the fundementals category. */}}
-    {{ $pages = (.Site.Taxonomies.categories.fundamentals).Pages | lang.Merge (.Sites.First.Taxonomies.categories.fundamentals).Pages }}
-  {{ else }}
-    {{ $pages = .Pages | union .Sections }}
-  {{ end }}
+  {{ $pages := .Pages }}
   <h1 class="text-3xl text-black font-semibold">
     {{ .Title | title }}
   </h1>
-  <div class="mt-8 text-lg text-black">
-    {{ .Content }}
-  </div>
+  {{ if gt (len .Content) 20 }}
+    <div class="mt-6 text-lg text-black">
+      {{ .Content }}
+    </div>
+  {{ end }}
   {{ if $pages }}
     {{ $interior_classes := site.Params.flex_box_interior_classes }}
-    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
       {{ range $pages }}
         {{ partial "boxes-section-summaries.html" (dict "context" . "classes" $interior_classes "fullcontent" true) }}
       {{ end }}

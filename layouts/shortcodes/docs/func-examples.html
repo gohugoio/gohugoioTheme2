@@ -1,0 +1,18 @@
+{{ $func := (partial "helpers/docs/get-func.html" (.Get 0)) }}
+{{ with $func }}
+  {{ with  .Examples }}
+    <h3>Examples</h3>
+    {{ range . }}
+      {{ $in := index . 0 }}
+      {{ $out := index . 1 }}
+      <div class="flex flex-wrap overflow-auto">
+        <div class="w-full md:w-1/2">
+          {{ transform.Highlight $in "go-html-template" "" }}
+        </div>
+        <div class="w-full md:w-1/2 md:pl-2">
+          {{ transform.Highlight $out "go-html-template" "" }}
+        </div>
+      </div>
+    {{ end }}
+  {{ end }}
+{{ end }}

@@ -1,0 +1,13 @@
+
+
+.documentation .funcsig {
+  @apply tracking-tighter font-mono text-gray-600 border border-gray-200 -mt-1 p-2  w-3/4;
+
+}
+
+
+.documentation .funcsig a{
+  @apply text-blue-700 hover:text-steel-500 no-underline;
+}
+
+

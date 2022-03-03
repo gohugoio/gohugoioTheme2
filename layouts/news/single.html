@@ -7,7 +7,7 @@
         {{ range .Params.categories }}
           <a
             href="{{ "/categories/" | relLangURL }}{{ . | urlize }}"
-            class="text-sm font-extrabold mb-0 link text-gray-500 dim mr-3">
+            class="text-sm font-semibold mb-0 link text-gray-500 dim mr-3">
             {{ humanize  . | upper }}
           </a>
         {{ end }}

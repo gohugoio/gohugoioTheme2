@@ -1,0 +1,61 @@
+{{ $namespace := .Params.namespace }}
+{{ $all := index  site.Data.docs.tpl "funcs" }}
+{{ $funcs := index $all $namespace }}
+
+{{ range $k, $v := $funcs }}
+  {{ $m := partial "format-func-godoc" (dict "ns" $namespace  "k" $k "v" $v) }}
+  <h2 id="{{ $k | anchorize }}" class="border-b">
+    {{ $namespace }}.{{ $k }}
+  </h2>
+  {{ with $.Resources.GetMatch (printf  "explanation/%s.md" ($k | lower) ) }}
+    {{ .Content }}
+  {{ else }}
+    <p>
+      {{ $.RenderString $m.desc }}
+    </p>
+  {{ end }}
+  {{ with $v.Args }}
+    <p
+      class="mt-8 font-mono font-semibold text-sm border-steel-700 p-2 bg-green-50 border-l-4 border-green-100 border-opacity-50">
+      {{ $namespace }}.{{ $k }}
+      {{ delimit (apply . "upper" ".") " " }}
+    </p>
+  {{ end }}
+
+  {{ with $v.Aliases }}
+    <p class="w-30 bg-steel-50 border p-2">
+      <b>Aliases:</b> <span class="font-mono">{{ delimit . ", " }}</span>
+    </p>
+  {{ end }}
+
+  {{ if $v.Examples }}
+    <h3>Examples</h3>
+  {{ end }}
+
+  {{ range $v.Examples }}
+    {{ $in := index . 0 }}
+    {{ $out := index . 1 }}
+    <div class="flex flex-wrap overflow-auto">
+      <div class="w-full md:w-1/2">
+        {{ transform.Highlight $in "go-html-template" "" }}
+      </div>
+      <div class="w-full md:w-1/2 md:pl-2">
+        {{ transform.Highlight $out "go-html-template" "" }}
+      </div>
+    </div>
+  {{ end }}
+{{ end }}
+
+{{ define "partials/format-func-godoc" }}
+  {{ $m := newScratch }}
+  {{ $k := .k }}
+  {{ $ns := .ns }}
+  {{ $description := .v.Description }}
+  {{ range .v.Args }}
+    {{ $description = replace $description . (printf "`%s`" ( . | upper ) ) }}
+  {{ end }}
+  {{ $description = replace $description $k (printf "`%s`" $k ) }}
+  {{ $description := replaceRE "{{(.*?) }}" "`{{ $1 }}`" $description }}
+  {{ $m.Set "desc" $description }}
+  {{ return $m.Values }}
+{{ end }}

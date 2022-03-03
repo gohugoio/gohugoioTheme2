@@ -1,0 +1,16 @@
+{{ $namespace := .Params.namespace }}
+{{ $all := index  site.Data.docs.tpl "funcs" }}
+{{ $funcs := index $all $namespace }}
+
+
+<h3 class="text-lg font-bold">What's on this Page</h3>
+<div class="leading-relaxed tracking-tight mt-2 mb-8">
+  <nav id="TableOfContents">
+    <ul>
+      {{ range $k, $v := $funcs }}
+        {{ $id := $k | anchorize }}
+        <li><a href="#{{ $id }}">{{ $k }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</div>
