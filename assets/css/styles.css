@@ -3,40 +3,35 @@
 @tailwind utilities;
 
 @import "components/all.css";
+@import "sections/all.css";
 
 html {
-    font-size: 14px;
-}
-
-@screen md {
-    html {
-        font-size: 16px;
-    }
+  font-size: 14px;
 }
 
 body {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    fill: currentColor; /* Applies to SVG only */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  fill: currentColor; /* Applies to SVG only */
 }
 
 .nested-blockquote blockquote {
-    border-left: 4px solid var(--primary-color);
-    padding-left: 1em;
-    /*margin: 0;*/
+  border-left: 4px solid var(--primary-color);
+  padding-left: 1em;
+  /*margin: 0;*/
 }
 
 .mw-90 {
-    max-width: 90%;
+  max-width: 90%;
 }
 
-/* Combine with classes in skins and skins-pseudo for 
+/* Combine with classes in skins and skins-pseudo for
  * many different transition possibilities. */
 .bg-animate,
 .bg-animate:hover,
 .bg-animate:focus {
-    -webkit-transition: background-color 0.15s ease-in-out;
-    transition: background-color 0.15s ease-in-out;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
 }
 
 /*
@@ -45,36 +40,36 @@ body {
 
 */
 .dim {
-    opacity: 1;
-    -webkit-transition: opacity 0.15s ease-in;
-    transition: opacity 0.15s ease-in;
+  opacity: 1;
+  -webkit-transition: opacity 0.15s ease-in;
+  transition: opacity 0.15s ease-in;
 }
 .dim:hover,
 .dim:focus {
-    opacity: 0.5;
-    -webkit-transition: opacity 0.15s ease-in;
-    transition: opacity 0.15s ease-in;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.15s ease-in;
+  transition: opacity 0.15s ease-in;
 }
 .dim:active {
-    opacity: 0.8;
-    -webkit-transition: opacity 0.15s ease-out;
-    transition: opacity 0.15s ease-out;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
 }
 
 @layer components {
-    .btn-primary {
-        @apply py-2 px-4 font-semibold rounded-md shadow-md bg-steel-600 hover:bg-steel-700 text-white hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-steel-500;
-    }
+  .btn-primary {
+    @apply py-2 px-4 font-semibold rounded-md shadow-md bg-steel-600 hover:bg-steel-700 text-white hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-steel-500;
+  }
 
-    .btn-secondary {
-        @apply py-2 px-4 font-semibold rounded-md shadow-md bg-green-600 hover:bg-green-700 text-white hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-steel-500;
-    }
+  .btn-secondary {
+    @apply py-2 px-4 font-semibold rounded-md shadow-md bg-green-600 hover:bg-green-700 text-white hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-steel-500;
+  }
 
-    a {
-        @apply text-blue-700 hover:text-steel-500 no-underline;
-    }
+  a {
+    @apply text-blue-700 hover:text-steel-500 no-underline;
+  }
 
-    .dark a {
-        @apply text-steel-600 hover:text-steel-400 no-underline;
-    }
+  .dark a {
+    @apply text-steel-600 hover:text-steel-400 no-underline;
+  }
 }

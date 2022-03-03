@@ -1,0 +1,37 @@
+{{ $root := site.GetPage "documentation" }}
+{{ $p := . }}
+
+
+<nav class="flex" aria-label="Breadcrumb">
+  <ol
+    class="inline-flex items-center -mx-1 space-x-2 flex-wrap tracking-tighter">
+    {{ template "breadcrums-item" (dict "root" $root "p1" $p "p2" $p ) }}
+  </ol>
+</nav>
+
+{{ define "breadcrums-item" }}
+  {{ if and .p1.Parent (ne .p1.Parent .root.Parent) }}
+    {{ template "breadcrums-item" (dict "root" .root  "p1" .p1.Parent "p2" .p2  ) }}
+  {{ end }}
+  {{ if and .p1.Parent .p1.Parent.IsHome  (or (eq .p1.Kind "term") (eq .p1.Kind "taxonomy")) }}
+    {{ template "breadcrums-item" (dict "root" .root  "p1" .root "p2" .p2  ) }}
+  {{ end }}
+  <li>
+    <div class="flex items-center">
+      {{ if or .p1.IsNode (ne .p1 .p2) }}
+        {{ if ne .p1 .root }}
+          {{ template "breadcrumbs-arrow" . }}
+        {{ end }}
+        <a href="{{ .p1.Permalink }}" class="truncate ml-1">
+          {{ .p1.LinkTitle | title }}
+        </a>
+      {{ end }}
+    </div>
+  </li>
+{{ end }}
+
+{{ define "breadcrumbs-arrow" }}
+  <svg class="text-gray-400 w-5 h-5 mr-2">
+    <use href="#icon--chevron-right"></use>
+  </svg>
+{{ end }}

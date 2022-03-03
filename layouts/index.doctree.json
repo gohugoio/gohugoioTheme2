@@ -1,0 +1,13 @@
+{{ $root := site.GetPage "documentation" }}
+{{ $tree :=  (dict "title" $root.LinkTitle "href" $root.RelPermalink "children"  (partial "navigation-get-children-recursive" $root ) )  }}
+
+{{ $tree | jsonify}}
+
+{{ define "partials/navigation-get-children-recursive" }}
+  {{ $pages := $.Sections }}
+  {{ $children := slice }}
+  {{ range $pages}}
+    {{ $children = $children | append (dict "title" .LinkTitle "href" .RelPermalink "children" (partial "navigation-get-children-recursive" . ) ) }}
+  {{ end }}
+  {{ return $children}}
+{{ end }}

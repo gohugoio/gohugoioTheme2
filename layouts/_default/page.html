@@ -1,35 +1,42 @@
 <header class="flex-none w-full">
   {{ $categories := .GetTerms "categories" }}
-  {{ range $categories }}
-    <a
-      href="{{ .RelPermalink }}"
-      class="text-sm tracking-wider mb-0 link text-gray-500 dim mr-3">
-      {{ .Title | upper }}
-    </a>
-  {{ end }}
+  <div class="mb-2">
+    {{ range $categories }}
+      <a
+        href="{{ .RelPermalink }}"
+        class="text-sm tracking-wider mb-0 link text-gray-500 dim mr-3">
+        {{ .Title | upper }}
+      </a>
+    {{ end }}
+  </div>
 
-
-  <h1 class="text-4xl font-semibold leading-tight mb-3 my-0 pt-3 text-black">
+  <h1 class="text-3xl font-semibold leading-tight mb-3 my-0 text-black">
     {{ .Title }}
   </h1>
 </header>
 
-{{/* TODO1 check usage */}}
-{{ with .Params.featured_image_path }}
-  <img src="{{ . }}" alt="Featured Image for {{ $.Title }}" class="mw-100" />
-{{ end }}
-
-
-<div class="mt-4 md:mt-8 prose lg:prose-lg" id="prose">
+<div class="mt-2 md:mt-4 prose lg:prose-lg" id="prose">
   {{ with .Params.description }}
-    <div class="lead">
+    <div class="text-base leading-relaxed mb-5">
       {{ . | $.RenderString }}
     </div>
   {{ end }}
 
-  {{- partial "docs/functions-signature.html" . -}}
-  {{ .Content }}
+  {{ $tags := .GetTerms "tags" }}
+  {{ range $tags }}
+    {{ $color := partial "helpers/funcs/color-from-string" .LinkTitle }}
+    {{ $class := printf "text-%s-600 bg-%s-200" $color $color }}
+    <a
+      href="{{ .RelPermalink }}"
+      class="{{ $class }} text-xs font-semibold no-underline inline-block py-1 px-2 uppercase rounded-full uppercase last:mr-0 mr-1 hover:opacity-75">
+      {{ .LinkTitle | upper }}
+    </a>
+  {{ end }}
 
+
+  <div class="mt-4">
+    {{ .Content }}
+  </div>
 
   <hr />
   {{ with .File }}
@@ -43,14 +50,20 @@
     </div>
   {{ end }}
 
-
-  <div class="mt-4 text-gray-300 text-sm">
-    Last updated:
-    {{ .Lastmod.Format "January 2, 2006" }}{{ with .GitInfo }}
-      :
-      <a href="{{ site.Params.ghrepo }}commit/{{ .Hash }}"
-        >{{ .Subject }} ({{ .AbbreviatedHash }})</a
-      >
-    {{ end }}
-  </div>
+  {{ if .Lastmod }}
+    <div class="mt-4 text-gray-300 text-sm">
+      Last updated:
+      {{ .Lastmod.Format "January 2, 2006" }}{{ with .GitInfo }}
+        :
+        <a href="{{ site.Params.ghrepo }}commit/{{ .Hash }}"
+          >{{ .Subject }} ({{ .AbbreviatedHash }})</a
+        >
+      {{ end }}
+    </div>
+  {{ end }}
 </div>
+
+{{ define "toc" }}
+  {{ $tocPartial := "" }}
+  {{- partial "toc.html" (dict "p" . "partial" $tocPartial ) -}}
+{{ end }}

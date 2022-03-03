@@ -23,23 +23,21 @@ disableAliases = true
 [build]
 # Used by PurgeCSS
 writeStats = true
+useResourceCacheWhen = 'never'
 
 [params]
 ghrepo = "https://github.com/gohugoio/hugoDocs/"
-    
 
 
-# Make the categories listing share the layouts from documentation.
+# Make the categories and tags listings share the layouts from documentation.
 [[cascade]]
 type = 'documentation'
 [cascade._target]
 path = '/categories/**'
-
-[markup]
-[markup.highlight]
-style = "trac"
-lineNumbersInTable = true
-noClasses = false
+[[cascade]]
+type = 'documentation'
+[cascade._target]
+path = '/tags/**'
 
 
 [minify]
@@ -48,8 +46,11 @@ noClasses = false
 [minify.tdewolff.html]
 keepWhitespace = true
 
-
 [module]
+[[module.mounts]]
+lang = "en"
+source = "content/en"
+target = "content"
 [[module.imports]]
 path = "github.com/gohugoio/gohugoioTheme2"
 [[module.imports]]
@@ -59,18 +60,8 @@ ignoreConfig = true
 ignoreImports = true
 [[module.imports.mounts]]
 lang = "en"
-source = "content/en"
-target = "content/documentation"
-
-[[module.imports.mounts]]
-lang = "en"
 source = "content/site/en"
 target = "content"
-
-[[module.imports.mounts]]
-lang = "zh"
-source = "content/zh"
-target = "content/documentation"
 
 [[module.imports.mounts]]
 source = "static"
@@ -97,7 +88,7 @@ source = "archetypes"
 target = "archetypes"
 
 [outputs]
-home = [ "HTML", "RSS", "REDIR", "HEADERS" ]
+home = [ "HTML", "RSS", "REDIR", "HEADERS", "DOCTREE" ]
 section = [ "HTML", "RSS"]
 
 [mediaTypes]
@@ -115,6 +106,11 @@ mediatype = "text/netlify"
 baseName = "_headers"
 isPlainText = true
 notAlternative = true
+[outputFormats.DOCTREE]
+mediatype = "application/json"
+baseName = "doctree"
+isPlainText = true
+notAlternative = true
 
 
 ## Relatd configuration.
@@ -126,6 +122,9 @@ toLower = false
 
 [[related.indices]]
 name = "keywords"
+weight = 80
+[[related.indices]]
+name = "tags"
 weight = 100
 [[related.indices]]
 name  = "date"

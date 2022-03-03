@@ -1,5 +1,5 @@
 import * as params from "@params";
-import { newNavStore, initColorScheme, bridgeTurboAndAlpine } from "./nav/index";
+import { newNavStore, newDocTreeController, initColorScheme, bridgeTurboAndAlpine } from "./nav/index";
 import Alpine from "jslibs/alpinejs/v3/alpinejs/dist/module.esm.js";
 import intersect from "jslibs/alpinejs/v3/intersect/dist/module.esm.js";
 import persist from "jslibs/alpinejs/v3/persist/dist/module.esm.js";
@@ -39,6 +39,7 @@ import focus from "jslibs/alpinejs/v3/focus/dist/module.esm.js";
       api_key: "167e7998590aebda7f9fedcf86bc4a55",
     };
 
+    Alpine.data("docTreeController", () => newDocTreeController());
     Alpine.data("searchController", () => newSearchController(searchConfig));
   }
 
@@ -55,6 +56,24 @@ import focus from "jslibs/alpinejs/v3/focus/dist/module.esm.js";
 
   // Start the Turbo-Alpine bridge.
   bridgeTurboAndAlpine(Alpine);
+
+  let containerScrollTops = {};
+
+  // To preserve scroll position in scrolling elements on navigation add data-turbo-preserve-scroll-container="somename" to the scrolling container.
+  addEventListener("turbo:click", () => {
+    document.querySelectorAll("[data-turbo-preserve-scroll-container]").forEach((ele) => {
+      containerScrollTops[ele.dataset.turboPreserveScrollContainer] = ele.scrollTop;
+    });
+  });
+
+  addEventListener("turbo:load", () => {
+    document.querySelectorAll("[data-turbo-preserve-scroll-container]").forEach((ele) => {
+      const containerScrollTop = containerScrollTops[ele.dataset.turboPreserveScrollContainer];
+      if (containerScrollTop) ele.scrollTo(0, containerScrollTop);
+    });
+
+    containerScrollTops = {};
+  });
 })();
 
 // TODO(bep) move out into its own file, also pull params out into config.

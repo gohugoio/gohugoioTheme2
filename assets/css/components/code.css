@@ -1,5 +1,5 @@
 .highlight {
-  background-color: #f3f4f4;
+ @apply bg-gray-50;
 }
 
 .dark .highlight {

@@ -1,0 +1,8 @@
+{{ $func := (partial "helpers/docs/get-func.html" (.Get 0)) }}
+{{ with $func }}
+  {{ with  .Aliases }}
+    <p class="border border-gray-200 mt-4 p-2 w-3/4">
+      <b>Aliases:</b> <span class="font-mono">{{ delimit . ", " }}</span>
+    </p>
+  {{ end }}
+{{ end }}

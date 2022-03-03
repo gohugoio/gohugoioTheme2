@@ -2,6 +2,8 @@
   <div>
     <button
       @click="toggleOpen()"
+      @open-search.window="toggleOpen()"
+      @keydown.meta.k.window="toggleOpen()"
       class="nightwind-prevent inline-flex items-center p-2 border border-transparent rounded-full shadow-sm text-black bg-blue-400 hover:bg-blue-600  hover:text-gray-700  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-steel-500">
       <svg
         xmlns="http://www.w3.org/2000/svg"

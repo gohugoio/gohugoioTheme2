@@ -1,18 +1,23 @@
-<!-- TOCs need to be declared explicitly in the front matter of content/*.md -->
+{{ $p := .p }}
+{{ $tocPartial :=  .partial }}
 <aside
-  class="fixed-lTK mw5-l right-0 text-sm py-4 sm:py-0 lg:px-4 nested-list-reset nested-links leading-normal text-black">
-  {{ if .Params.toc }}
-    {{ with .TableOfContents }}
-      {{ if ge (len .) 100 }}
-        <h3 class="text-lg font-bold">What's on this Page</h3>
-        <div class="leading-relaxed tracking-tight mt-2 mb-8">
-          {{ . }}
-        </div>
+  class="right-0 text-sm lg:px-4 nested-list-reset nested-links leading-normal text-black">
+  {{ with $tocPartial }}
+    {{ partial $tocPartial $p }}
+  {{ else }}
+    {{ if not $p.Params.notoc }}
+      {{ with $p.TableOfContents }}
+        {{ if ge (len .) 100 }}
+          <h3 class="text-lg font-bold">What's on this Page</h3>
+          <div class="leading-relaxed tracking-tight mt-2 mb-8">
+            {{ . }}
+          </div>
+        {{ end }}
       {{ end }}
     {{ end }}
   {{ end }}
 
-  {{ $related := .Site.RegularPages.Related . | first 5 }}
+  {{ $related := site.RegularPages.Related $p | first 5 }}
   {{ with $related }}
     <h3 class="text-lg font-bold">See Also</h3>
     <ul class="text-md mt-2">

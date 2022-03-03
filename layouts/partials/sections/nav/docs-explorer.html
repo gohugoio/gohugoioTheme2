@@ -1,57 +1,54 @@
-{{ $currentPage := . }}
 <nav
   role="navigation"
   id="main-menu"
-  x-data="{ menu: {}, show: true }"
-  data-turbolinks-permanent>
-  <ul x-cloak class="p-0" x-show.transition.in.opacity.300ms="show">
-    {{ range .Site.Menus.docs.ByWeight }}
-      {{ $post := printf "%s" .Post }}
-      <li
-        class="text-base w-full hover:text-hotpink-400 font-extrabold{{ if eq $post "break" }}
-          pb-1 border-b border-solid border-gray-200 dark:border-gray-800
-        {{ end }}">
-        {{ $isCurrent := or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) }}
-        {{ if .HasChildren }}
-          <a
-            @click="menu['{{ .Identifier }}'] = ('{{ .Identifier }}' in menu) ? !menu['{{ .Identifier }}'] : !{{ $isCurrent }}"
-            class="pl-3 inline-block w-full link text-gray-500 cursor-pointer hover:text-hotpink-400 pr-2 py-2 {{ if  $isCurrent }}
-              text-steel-500
-            {{ end }}">
-            {{ .Name }}
-          </a>
-        {{ else }}
-          <a
-            href="{{ .URL }}"
-            class="pl-3 inline-block w-full link text-gray-500 hover:text-hotpink-400 pr-2 py-1 {{ if  $isCurrent }}
-              text-steel-500
-            {{ end }}"
-            data-target=".{{ .Identifier }}">
-            {{ .Name }}
-          </a>
-        {{ end }}
-
-        {{- if .HasChildren }}
-          {{ $hasCurrent :=  $currentPage.IsMenuCurrent "docs" . }}
-          <ul
-            class="pl-0"
-            x-show.transition.origin.top.left="({{ $isCurrent }} && !('{{ .Identifier }}' in menu)) || menu['{{ .Identifier }}']">
-            {{- range .Children }}
-              <li class="text-sm font-normal">
-                <a
-                  href="{{ .URL }}"
-                  class="block hover:bg-gray-50 hover:text-hotpink-600 pl-6 pr-2 pb-1.5 {{ if $hasCurrent }}
-                    text-steel-500
-                  {{ else }}
-                    black
-                  {{ end }}">
-                  {{ .Name }}
-                </a>
-              </li>
-            {{- end }}
-          </ul>
-        {{- end }}
-      </li>
-    {{- end }}
+  class="mt-1 md:mt-2 mx-2 w-4/5 overflow-auto bg-gray-50 p-2"
+  x-data="docTreeController()"
+  data-turbo-permanent
+  @turbo:before-render.window="onBeforeRender()"
+  x-cloak>
+  <ul class="p-0 border-l border-gray-200">
+    {{ $root := site.GetPage "documentation" }}
+    {{ template "docs-explorer-section" (dict "p" $root "level" 1 ) }}
   </ul>
 </nav>
+
+{{ define "docs-explorer-section" }}
+  {{ $p := .p }}
+  {{ $level := .level }}
+  {{ $pleft := add .level 1 }}
+
+  {{ $pl := printf "pl-%d" $pleft }}
+  {{ $plCurrent := printf "pl-%d" (sub $pleft 2 ) }}
+  {{ $pages := ($p.Pages | union $p.Sections).ByWeight }}
+  {{ $pages = where $pages "Weight" "lt" 1000 }}
+
+  {{ range $pages }}
+    {{ $hasChildren := gt (len .Pages) 0 }}
+    {{ $class := cond (eq $level 1) "text-black hover:text-gray-900" "text-gray-600 hover:text-gray-500" }}
+    <li class="w-full">
+      {{ if $hasChildren }}
+        <a
+          @click.prevent="toggleNode('{{ .RelPermalink }}')"
+          :class="{ 'font-semibold border-l-2': isCurrent('{{ .RelPermalink }}') }"
+          class="block cursor-pointer {{ $pl }} {{ $class }} tracking-tight leading-7 hover:bg-gray-100">
+          <span :class="{ 'pl-2px': !isCurrent('{{ .RelPermalink }}') }"
+            >{{ .LinkTitle }}</span
+          >
+        </a>
+        <ul class="" x-show="isOpen('{{ .RelPermalink }}')">
+          {{ template "docs-explorer-section" (dict "p" . "level" (add $level 1)) }}
+        </ul>
+      {{ else }}
+        <a
+          class="block box-content cursor-pointer {{ $pl }} text-gray-700 hover:text-gray-600 tracking-tight leading-7 hover:bg-gray-100"
+          :class="{ 'font-semibold border-l-2': isCurrent('{{ .RelPermalink }}') }"
+          href="{{ .RelPermalink }}"
+          ><span :class="{ 'pl-2px': !isCurrent('{{ .RelPermalink }}') }"
+            >{{ .LinkTitle }}</span
+          ></a
+        >
+      {{ end }}
+    </li>
+  {{ end }}
+
+{{ end }}

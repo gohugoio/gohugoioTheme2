@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html id="gohugoio" class="no-js nightwind" lang="{{ .Site.Language.Lang }}">
   {{ partial "sections/common/head.html" . }}
-  <body class="m-0 font-sans">
+  <body class="{{ .Section }} m-0 font-sans bg-gray-50">
     {{ partial "sections/common/after-body-start.html" . }}
-    <div class="bg-white">
+    <div class="">
       {{ block "nav" . }}
         {{ partial "sections/nav/menu.html" . }}
       {{ end }}
       {{ block "header" . }}{{ end }}
       <main role="main" class="min-h-screen container mx-auto pb-7 sm:pb-0">
-        <div class="h-screen flex overflow-hidden" x-data="{ open: false }">
+        {{ partial "sections/nav/icons.html" . }}
+        <div
+          class="h-screen flex overflow-hidden"
+          x-data__="{ TODO1 open: false }">
           {{/* Mobile menu */}}
           <div
             class="fixed inset-0 flex z-40 lg:hidden"
@@ -47,7 +50,7 @@
               <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                 <nav aria-label="Sidebar" class="mt-5">
                   <div class="px-4 space-y-1">
-                    {{ partial "sections/nav/docs-explorer.html" . }}
+                    {{/* partial "sections/nav/docs-explorer.html" . */}}
                   </div>
                 </nav>
               </div>
@@ -60,9 +63,14 @@
           <div class="hidden lg:flex lg:flex-shrink-0">
             <div class="flex flex-col w-64">
               <div class="flex flex-col h-0 flex-1 border-r border-gray-200">
-                <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
+                <div
+                  class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto"
+                  data-turbo-preserve-scroll-container="sidebar">
                   <nav class="mt-0 flex-1" aria-label="Sidebar">
                     <div class="px-0">
+                      <div class="mt-2 mb-4 pr-6">
+                        {{ partial "sections/nav/fake-searchinput.html" . }}
+                      </div>
                       {{ partial "sections/nav/docs-explorer.html" . }}
                     </div>
                   </nav>
@@ -106,24 +114,27 @@
             </div>
             <div class="flex-1 relative z-0 flex overflow-hidden pb-8 md:pb-12">
               <main
-                class="flex-1 relative z-0 overflow-y-auto focus:outline-none"
+                class="flex-1 relative z-0 overflow-y-auto focus:outline-none bg-white"
                 tabindex="0">
                 {{/* Main */}}
-                <div class="absolute inset-0 py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
+                <div class="py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
+                  <div>
+                    {{ partial "sections/nav/breadcrumbs.html" . }}
+                  </div>
                   <div
-                    class="h-full border-2 border-gray-200 border-none rounded-lg">
+                    class="h-full border-2 border-gray-200 border-none mt-4 rounded-lg">
                     {{ block "main" . }}{{ end }}
                   </div>
                 </div>
               </main>
               {{ if .IsPage }}
                 <aside
-                  class="hidden relative xl:flex xl:flex-col flex-shrink-0 w-96 border-l border-gray-200 overflow-auto">
+                  class="hidden relative xl:flex xl:flex-col flex-shrink-0 w-96 border-l border-gray-200 overflow-auto bg-white">
                   {{/* Secondary col */}}
-                  <div class="absolute inset-0 py-6 px-4 sm:px-6 lg:px-8">
+                  <div class="px-4 sm:px-6 lg:px-8">
                     <div
-                      class="h-full border-2 border-gray-200 border-none rounded-lg">
-                      {{- partial "toc.html" . -}}
+                      class="h-full border-2 border-gray-200 border-none rounded-lg mt-2 lg:mt-8">
+                      {{ block "toc" . }}{{ end }}
                     </div>
                   </div>
                 </aside>

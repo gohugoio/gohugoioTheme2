@@ -1,0 +1,5 @@
+{{ $colors := slice "orange" "blue"  "green" "steel" "hotpink" }}
+{{ $hash := (crypto.FNV32a .) }}
+{{ $i := mod $hash (len $colors) }}
+{{ $color := index $colors $i }}
+{{ return $color }}
