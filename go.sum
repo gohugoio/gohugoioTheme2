@@ -1,0 +1,7 @@
+github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3 v3.900.100 h1:vEpD998c0khrykCrsDP+rG+1wxLDcMOAWZ2X0BpU5bM=
+github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3 v3.900.100/go.mod h1:WWQxcmPs5Xy3xDgi29ipkmZT6NKVb3bsqyCDTY3eYYY=
+github.com/gohugoio/hugo-mod-jslibs/instantpage v0.5.1 h1:Aig+0MOPXiuQNZpnxOMS4uwUsnyq41JnQzGW4Gk3o7Y=
+github.com/gohugoio/hugo-mod-jslibs/instantpage v0.5.1/go.mod h1:N4EUbbL7Cw4Yq+GHeK3MUSiOJQbzfuUFRyvBKvnVBR8=
+github.com/gohugoio/hugo-mod-jslibs/turbo/v7 v7.0.0-20220127163053-14169e3a1dd0 h1:LZtJpLdrobw8A+Si1vF16Vfig9cY7+4MdbtKyXfiY4Y=
+github.com/gohugoio/hugo-mod-jslibs/turbo/v7 v7.0.0-20220127163053-14169e3a1dd0/go.mod h1:7YpZ5H9gE7M/Br+1g052hfMl6jZs1x+yU0hdJfSiB14=
+github.com/instantpage/instant.page v5.1.0+incompatible/go.mod h1:GXVDktwI+K4T9o5mcK2NYDqPFxAUrB9U9goR9oG1SaI=
