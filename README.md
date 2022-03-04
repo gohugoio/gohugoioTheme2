@@ -4,7 +4,7 @@
 
 The [exampleSite](./exampleSite) is built to https://gohugoiotheme.netlify.app/
 
-Bo make changes to the theme locally, you need Go, NPM and Hugo installed. Then:
+To make changes to the theme locally, you need Go, NPM and Hugo installed. Then:
 
 * `cd exampleSite`
 * `npm i`
