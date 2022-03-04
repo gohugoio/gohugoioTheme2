@@ -1,5 +1,8 @@
+github.com/gohugoio/gohugoioTheme v0.0.0-20200711112515-b0dfe471654f/go.mod h1:kpw3SS48xZvLQGEXKu8u5XHgXkPvL8DX3oGa07+z8Bs=
 github.com/gohugoio/gohugoioTheme v0.0.0-20210301124928-2c15837dfec3/go.mod h1:kpw3SS48xZvLQGEXKu8u5XHgXkPvL8DX3oGa07+z8Bs=
 github.com/gohugoio/gohugoioTheme v0.0.0-20220228085601-7cfbda06d135/go.mod h1:kpw3SS48xZvLQGEXKu8u5XHgXkPvL8DX3oGa07+z8Bs=
+github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3 v3.401.201 h1:rIBco2i/51nTPbi7pHUvwBwznCddMOsp/9pR2veAPx8=
+github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3 v3.401.201/go.mod h1:WWQxcmPs5Xy3xDgi29ipkmZT6NKVb3bsqyCDTY3eYYY=
 github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3 v3.500.100 h1:yIymGxglvwr9Guhk7cr9VoMQ3IgLLJ0E4PKcKCg+kJY=
 github.com/gohugoio/hugo-mod-jslibs-dist/alpinejs/v3 v3.500.100/go.mod h1:WWQxcmPs5Xy3xDgi29ipkmZT6NKVb3bsqyCDTY3eYYY=
 github.com/gohugoio/hugo-mod-jslibs/instantpage v0.5.1 h1:Aig+0MOPXiuQNZpnxOMS4uwUsnyq41JnQzGW4Gk3o7Y=
@@ -8,6 +11,8 @@ github.com/gohugoio/hugo-mod-jslibs/spruce v0.1.0/go.mod h1:t7yzCU3sAQmp1CvaHvt7
 github.com/gohugoio/hugo-mod-jslibs/turbo/v7 v7.0.0-20220127163053-14169e3a1dd0 h1:LZtJpLdrobw8A+Si1vF16Vfig9cY7+4MdbtKyXfiY4Y=
 github.com/gohugoio/hugo-mod-jslibs/turbo/v7 v7.0.0-20220127163053-14169e3a1dd0/go.mod h1:7YpZ5H9gE7M/Br+1g052hfMl6jZs1x+yU0hdJfSiB14=
 github.com/gohugoio/hugo-mod-jslibs/turbolinks v0.6.0/go.mod h1:0COpoSU/YogktyDLZn4aoXioJPq+f4jvdenIZj5ozMQ=
+github.com/gohugoio/hugoDocs v0.81.0 h1:9J+C0FbYh+NnCKHYNiYmPVBvQEGEtD74Xglfde2dibA=
+github.com/gohugoio/hugoDocs v0.81.0/go.mod h1:aP7Nf1vj888zYIJgWwr4rjh+OB/CXQyoY9fAcI1FjG0=
 github.com/gohugoio/hugoDocs v0.81.1-0.20220302165412-259c65c8d5b8 h1:9WgKP9Fm63UFliMVhV2o4P2qZgiyGl0EUZZ838vltZY=
 github.com/gohugoio/hugoDocs v0.81.1-0.20220302165412-259c65c8d5b8/go.mod h1:Mdx6XSpQEzpLP6vp0eDE0vcwvQF7wSVVDLMy4OH1VFQ=
 github.com/gohugoio/hugoDocs v0.93.1 h1:sF+2iZLiYGt/xnrhiK8TY74v740SCjS0or6ym4T5IZA=
