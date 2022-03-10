@@ -100,7 +100,7 @@ module.exports = {
 		},
 		fontWeight: {
 			light: 300,
-			normal: 500,
+			normal: 400,
 			semibold: 600,
 			bold: 700,
 			
@@ -116,6 +116,7 @@ module.exports = {
 						maxWidth: '80ch',
 						fontWeight: '400',
 						lineHeight: '1.5',
+						color: '#000',
 						strong: {
 							fontWeight: '600',
 						},
