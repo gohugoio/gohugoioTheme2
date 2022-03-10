@@ -96,7 +96,7 @@ module.exports = {
 		},
 		fontFamily: {
 			...theme.fontFamily,
-			sans: ['Mulish', ...theme.fontFamily.sans],
+			sans: ['Source Sans Pro', ...theme.fontFamily.sans],
 		},
 		extend: {
 			spacing: {
@@ -110,29 +110,29 @@ module.exports = {
 						fontWeight: '400',
 						lineHeight: '1.5',
 						strong: {
-							fontWeight: '600',
+							fontWeight: '700',
 						},
 						a: {
 							color: colors.blue[900],
 							textDecoration: 'underline',
-							fontWeight: '500',
+							fontWeight: '400',
 						},
 						h1: {
 							fontWeight: '400',
 							marginBottom: '1rem',
 						},
 						h2: {
-							fontWeight: '600',
+							fontWeight: '700',
 							marginTop: '1.5em',
 							marginBottom: '1rem',
 						},
 						h3: {
-							fontWeight: '600',
+							fontWeight: '700',
 							marginTop: '1.5em',
 							marginBottom: '1rem',
 						},
 						h4: {
-							fontWeight: '600',
+							fontWeight: '700',
 							marginTop: '1.5em',
 							marginBottom: '1rem',
 						},
