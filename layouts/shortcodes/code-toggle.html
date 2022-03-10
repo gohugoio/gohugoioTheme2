@@ -17,7 +17,7 @@
       <a
         href="#"
         x-on:click="$store.nav.userSettings.settings.configFileType = '{{ index $langs $i }}'"
-        class="text-gray-900 group relative min-w-0 flex-1 overflow-hidden p-3 text-sm font-medium text-center hover:bg-gray-50 focus:z-10"
+        class="text-gray-900 group relative min-w-0 flex-1 overflow-hidden p-3 text-sm font-medium no-underline text-center hover:bg-gray-50 focus:z-10"
         aria-current="page">
         <span>
           {{ printf "%s.%s" $file . }}
