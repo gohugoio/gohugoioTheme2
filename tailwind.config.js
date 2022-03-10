@@ -98,6 +98,13 @@ module.exports = {
 			...theme.fontFamily,
 			sans: ['Mulish', ...theme.fontFamily.sans],
 		},
+		fontWeight: {
+			light: 300,
+			normal: 500,
+			semibold: 600,
+			bold: 700,
+			
+		},
 		extend: {
 			spacing: {
 				'2/3': '66.666667%',
