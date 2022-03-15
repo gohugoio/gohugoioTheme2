@@ -446,7 +446,7 @@ module.exports = {
     enabled: process.env.HUGO_ENVIRONMENT === "production",
     content: ["./hugo_stats.json", "./layouts/**/*.html"],
     options: {
-      safelist: ["dark", "nightwind"],
+      safelist: ["dark", "nightwind", "algolia-docsearch-suggestion--highlight"],
     },
     extractors: [
       {
