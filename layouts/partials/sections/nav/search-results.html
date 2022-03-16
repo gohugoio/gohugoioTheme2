@@ -24,25 +24,27 @@
         x-transition:leave-start="translate-x-0"
         x-transition:leave-end="translate-x-full">
         <div
-          class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+          class="flex h-full flex-col overflow-y-scroll bg-white dark:bg-steel-900 py-6 shadow-xl">
           <div class="px-4 sm:px-6">
             <div class="flex items-start justify-between">
               <input
                 x-model="query"
                 @click="search()"
                 type="search"
-                class="text-black bg-opacity-25 shadow rounded border-0 p-3 w-full"
+                class="text-black bg-opacity-2 dark:bg-gray-900 shadow rounded border-0 p-3 w-full"
                 placeholder="Search the Docs..."
                 x-ref="input" />
             </div>
           </div>
           <div class="relative mt-6 flex-1 px-4 sm:px-6">
-            <ul role="list" class="divide-y divide-gray-200">
+            <ul
+              role="list"
+              class="divide-y divide-gray-200 dark:divide-gray-900">
               <template
                 x-for="[group, entries] in Object.entries(result)"
                 :key="group">
                 <li class="py-4">
-                  <div class="mb-1" x-text="group"></div>
+                  <div class="mb-1 dark:text-gray-300" x-text="group"></div>
                   <template x-for="entry in entries" :key="entry.objectID">
                     <a
                       class="flex flex-nowrap space-x-4 py-2 text-sm leading-5 text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 cursor-pointer transition duration-150 ease-in-out"

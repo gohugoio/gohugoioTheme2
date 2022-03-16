@@ -1,5 +1,5 @@
 <nav
-  class="nightwind-prevent nightwind-prevent-block bg-gray-900 flex flex-wrap items-center justify-between p-4 m-0 z-20"
+  class="nightwind-prevent bg-gray-900 flex flex-wrap items-center justify-between p-4 m-0 z-20"
   x-data="{ open: false }">
   <div class="container mx-auto flex flex-shrink-0 items-center">
     <div class="mr-10">
@@ -61,7 +61,7 @@
         {{ partial "sections/nav/theme.html" . }}
 
       </div>
-      <div class="flex items-center space-x-3">
+      <div class="flex items-center space-x-3 nightwind-prevent-block">
         {{ template "button-social-twitter" }}
         {{ template "button-social-github" }}
       </div>

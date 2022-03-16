@@ -67,9 +67,11 @@ function newSearchController(cfg) {
     }, {});
   };
 
+  const designMode = false;
+
   return {
-    query: "",
-    open: false,
+    query: designMode ? "shortcodes" : "",
+    open: designMode,
     result: {},
     toggleOpen: function () {
       this.open = !this.open;
