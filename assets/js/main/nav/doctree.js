@@ -28,9 +28,7 @@ export function newDocTreeController() {
       let ref = location.pathname;
       this.treeState.currentNode = ref;
       for (let key in this.treeState) {
-        if (ref == key || ref.startsWith(key)) {
-          this.treeState[key].open = true;
-        }
+        this.treeState[key].open = ref == key || ref.startsWith(key);
       }
     },
 
