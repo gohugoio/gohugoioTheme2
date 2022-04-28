@@ -242,7 +242,7 @@ HasChildren returns whether this menu item has any children.
 
 ## IsEqual {#navigation_menuentry_isequal}
 
-\([](/documentation/reference/objects//)\) → [bool](/documentation/reference/gotypes/#bool)
+\([*MenuEntry](/documentation/reference/objects//*menuentry)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
 IsEqual returns whether the two menu entries represents the same menu entry.
 
@@ -255,7 +255,7 @@ IsEqual returns whether the two menu entries represents the same menu entry.
 
 ## IsSameResource {#navigation_menuentry_issameresource}
 
-\([](/documentation/reference/objects//)\) → [bool](/documentation/reference/gotypes/#bool)
+\([*MenuEntry](/documentation/reference/objects//*menuentry)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
 IsSameResource returns whether the two menu entries points to the same
 resource (URL).

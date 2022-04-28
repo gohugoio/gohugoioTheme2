@@ -113,7 +113,7 @@ to forward slashes.
 
 ## path.Join {#path_namespace_join}
 
-\([](/documentation/reference/objects//)\) → [string](/documentation/reference/gotypes/#string)
+\([...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
 Join joins any number of path elements into a single path, adding a
 separating slash if necessary. All the input

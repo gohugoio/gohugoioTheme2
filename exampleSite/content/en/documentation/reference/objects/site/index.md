@@ -22,7 +22,7 @@ weight: 10
 
 
 ## Language {#page_site_language}
-\(\) → [](/documentation/reference/objects//)
+\(\) → [*langs.Language](/documentation/reference/objects//*langs.language)
 {.funcsig}
 Returns the `Language` configured for this Site.
 
@@ -142,7 +142,7 @@ Returns the `Params` configured for this site.
 
 
 ## Data {#page_site_data}
-\(\) → [](/documentation/reference/objects//)
+\(\) → [map[string]any](/documentation/reference/objects//map[string]any)
 {.funcsig}
 Returns a map of all the data inside /data.
 

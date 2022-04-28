@@ -1,5 +1,15 @@
 {{ $colors := slice "orange" "blue"  "green" "steel" "hotpink" }}
+{{ $shades := slice 100 200 300 400 500 600 700 800 900 }}
 {{ $hash := (crypto.FNV32a .) }}
 {{ $i := mod $hash (len $colors) }}
+{{ $j := mod $hash (len $shades) }}
 {{ $color := index $colors $i }}
-{{ return $color }}
+{{ $shade1 := index $shades $j }}
+{{ $shade2 := 0 }}
+{{ if ge $shade1 500 }}
+  {{ $shade2 = sub $shade1 400 }}
+{{ else }}
+  {{ $shade2 = add $shade1 400 }}
+{{ end }}
+{{ $res := dict  "color" $color "shade1" $shade1  "shade2" $shade2 }}
+{{ return $res }}

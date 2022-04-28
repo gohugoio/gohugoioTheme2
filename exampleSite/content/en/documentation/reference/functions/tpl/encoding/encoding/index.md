@@ -62,7 +62,7 @@ Base64Encode returns the base64 encoding of the given content.
 
 ## encoding.Jsonify {#encoding_namespace_jsonify}
 
-\([](/documentation/reference/objects//)\) → [HTML](/documentation/reference/objects/html/template/html)
+\([...any](/documentation/reference/objects//...any)\) → [HTML](/documentation/reference/objects/html/template/html)
 {.funcsig}
 Jsonify encodes a given object to JSON.  To pretty print the JSON, pass a map
 or dictionary of options as the first argument.  Supported options are

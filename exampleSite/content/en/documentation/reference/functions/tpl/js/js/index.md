@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## js.Build {#js_namespace_build}
 
-\([](/documentation/reference/objects//)\) → [Resource](/documentation/reference/objects/resources/resource/resource)
+\([...any](/documentation/reference/objects//...any)\) → [Resource](/documentation/reference/objects/resources/resource/resource)
 {.funcsig}
 Build processes the given Resource with ESBuild.
 

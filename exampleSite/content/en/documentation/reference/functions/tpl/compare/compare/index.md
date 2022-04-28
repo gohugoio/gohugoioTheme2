@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## compare.Conditional {#compare_namespace_conditional}
 
-\([bool](/documentation/reference/gotypes/#bool)[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\([bool](/documentation/reference/gotypes/#bool),[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 Conditional can be used as a ternary operator.
 It returns a if condition, else b.
@@ -47,7 +47,7 @@ It returns a if condition, else b.
 
 ## compare.Default {#compare_namespace_default}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [any](/documentation/reference/gotypes/#any)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 Default checks whether a given value is set and returns a default value if it
 is not.  "Set" in this context means non-zero for numeric types and times;
@@ -66,7 +66,7 @@ any boolean or struct value; or non-nil for any other types.
 
 ## compare.Eq {#compare_namespace_eq}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [bool](/documentation/reference/gotypes/#bool)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
 Eq returns the boolean truth of arg1 == arg2 || arg1 == arg3 || arg1 == arg4.
 
@@ -82,7 +82,7 @@ Eq returns the boolean truth of arg1 == arg2 || arg1 == arg3 || arg1 == arg4.
 
 ## compare.Ge {#compare_namespace_ge}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [bool](/documentation/reference/gotypes/#bool)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
 Ge returns the boolean truth of arg1 >= arg2 && arg1 >= arg3 && arg1 >= arg4.
 
@@ -98,7 +98,7 @@ Ge returns the boolean truth of arg1 >= arg2 && arg1 >= arg3 && arg1 >= arg4.
 
 ## compare.Gt {#compare_namespace_gt}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [bool](/documentation/reference/gotypes/#bool)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
 Gt returns the boolean truth of arg1 > arg2 && arg1 > arg3 && arg1 > arg4.
 
@@ -114,7 +114,7 @@ Gt returns the boolean truth of arg1 > arg2 && arg1 > arg3 && arg1 > arg4.
 
 ## compare.Le {#compare_namespace_le}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [bool](/documentation/reference/gotypes/#bool)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
 Le returns the boolean truth of arg1 <= arg2 && arg1 <= arg3 && arg1 <= arg4.
 
@@ -130,7 +130,7 @@ Le returns the boolean truth of arg1 <= arg2 && arg1 <= arg3 && arg1 <= arg4.
 
 ## compare.Lt {#compare_namespace_lt}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [bool](/documentation/reference/gotypes/#bool)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
 Lt returns the boolean truth of arg1 < arg2 && arg1 < arg3 && arg1 < arg4.
 
@@ -148,7 +148,7 @@ Lt returns the boolean truth of arg1 < arg2 && arg1 < arg3 && arg1 < arg4.
 
 ## compare.Ne {#compare_namespace_ne}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [bool](/documentation/reference/gotypes/#bool)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
 Ne returns the boolean truth of arg1 != arg2 && arg1 != arg3 && arg1 != arg4.
 

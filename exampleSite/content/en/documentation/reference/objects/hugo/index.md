@@ -59,7 +59,7 @@ It can be any string, but it will be all lower case.
 
 ## Deps {#hugo_info_deps}
 
-\(\) → [](/documentation/reference/objects//)
+\(\) → [[]*Dependency](/documentation/reference/objects//[]*dependency)
 {.funcsig}
 Deps gets a list of dependencies for this Hugo build.
 

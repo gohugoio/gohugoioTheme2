@@ -1,10 +1,11 @@
 ---
 title: Host on GitHub
 linktitle: Host on GitHub
-description: Deploy Hugo as a GitHub Pages project or personal/organizational site and automate the whole process with Github Action Workflow
+description: Deploy Hugo as a GitHub Pages project or personal/organizational site and automate the whole process with Github Action Workflow.
 date: 2014-03-21
 publishdate: 2014-03-21
 categories: [hosting and deployment]
+tags: [github, git]
 keywords: [github,git,deployment,hosting]
 authors: [Spencer Lyon, Gunnar Morling]
 
@@ -79,7 +80,7 @@ jobs:
           publish_dir: ./public
 ```
 
-For more advanced settings https://github.com/marketplace/actions/hugo-setup 
+For more advanced settings https://github.com/marketplace/actions/hugo-setup
 
 ## Use a Custom Domain
 

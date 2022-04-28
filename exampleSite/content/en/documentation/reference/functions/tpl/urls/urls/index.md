@@ -80,7 +80,7 @@ Anchorize creates sanitized anchor names that are compatible with Blackfriday.
 
 ## urls.Parse {#urls_namespace_parse}
 
-\([any](/documentation/reference/gotypes/#any)\) → [](/documentation/reference/objects//)
+\([any](/documentation/reference/gotypes/#any)\) → [*url.URL](/documentation/reference/objects//*url.url)
 {.funcsig}
 Parse parses rawurl into a URL structure. The rawurl may be relative or
 absolute.
@@ -97,7 +97,7 @@ absolute.
 
 ## urls.Ref {#urls_namespace_ref}
 
-\([any](/documentation/reference/gotypes/#any)[any](/documentation/reference/gotypes/#any)\) → [HTML](/documentation/reference/objects/html/template/html)
+\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [HTML](/documentation/reference/objects/html/template/html)
 {.funcsig}
 Ref returns the absolute URL path to a given content item.
 
@@ -130,7 +130,7 @@ page's position in the project directory structure and the current language.
 
 ## urls.RelRef {#urls_namespace_relref}
 
-\([any](/documentation/reference/gotypes/#any)[any](/documentation/reference/gotypes/#any)\) → [HTML](/documentation/reference/objects/html/template/html)
+\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [HTML](/documentation/reference/objects/html/template/html)
 {.funcsig}
 RelRef returns the relative URL path to a given content item.
 

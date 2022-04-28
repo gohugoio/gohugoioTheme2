@@ -51,7 +51,7 @@ working directory.
 
 ## images.Filter {#images_namespace_filter}
 
-\([](/documentation/reference/objects//)\) → [ImageResource](/documentation/reference/objects/resources/images/imageresource)
+\([...any](/documentation/reference/objects//...any)\) → [ImageResource](/documentation/reference/objects/resources/images/imageresource)
 {.funcsig}
 
 {{< docs/func-aliases "images.Filter" >}}
