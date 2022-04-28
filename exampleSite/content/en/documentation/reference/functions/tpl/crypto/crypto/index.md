@@ -46,7 +46,7 @@ FNV32a hashes using fnv32a algorithm
 
 ## crypto.HMAC {#crypto_namespace_hmac}
 
-\([any](/documentation/reference/gotypes/#any)[any](/documentation/reference/gotypes/#any)[any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [string](/documentation/reference/gotypes/#string)
+\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
 HMAC returns a cryptographic hash that uses a key to sign a message.
 

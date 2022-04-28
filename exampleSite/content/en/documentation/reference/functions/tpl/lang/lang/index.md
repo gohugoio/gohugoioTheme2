@@ -84,7 +84,7 @@ FormatNumber formats number with the given precision for the current language.
 
 ## lang.FormatNumberCustom {#lang_namespace_formatnumbercustom}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [string](/documentation/reference/gotypes/#string)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
 FormatNumberCustom formats a number with the given precision using the
 negative, decimal, and grouping options.  The `options`
@@ -143,7 +143,7 @@ Merge creates a union of pages from two languages.
 
 ## lang.Translate {#lang_namespace_translate}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [string](/documentation/reference/gotypes/#string)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
 Translate returns a translated string for id.
 

@@ -1,16 +1,16 @@
 {{ define "main" }}
   {{ $pages := .Pages }}
-  <h1 class="text-3xl text-black font-semibold">
+  <h1 class="text-2xl text-black font-semibold">
     {{ .Title | title }}
   </h1>
   {{ if gt (len .Content) 20 }}
-    <div class="mt-6 text-lg text-black">
+    <div class="mt-4 text-lg text-black">
       {{ .Content }}
     </div>
   {{ end }}
   {{ if $pages }}
     {{ $interior_classes := site.Params.flex_box_interior_classes }}
-    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 -mx-4 mt-8">
       {{ range $pages }}
         {{ partial "boxes-section-summaries.html" (dict "context" . "classes" $interior_classes "fullcontent" true) }}
       {{ end }}

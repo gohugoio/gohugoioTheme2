@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## time.AsTime {#time_namespace_astime}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [any](/documentation/reference/gotypes/#any)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 AsTime converts the textual representation of the datetime string into
 a time.Time interface.
@@ -47,7 +47,7 @@ a time.Time interface.
 
 ## time.Duration {#time_namespace_duration}
 
-\([any](/documentation/reference/gotypes/#any)[any](/documentation/reference/gotypes/#any)\) → [Duration](/documentation/reference/objects/time/duration)
+\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [Duration](/documentation/reference/objects/time/duration)
 {.funcsig}
 Duration converts the given number to a time.Duration.
 Unit is one of nanosecond/ns, microsecond/us/µs, millisecond/ms, second/s, minute/m or hour/h.
@@ -64,7 +64,7 @@ Unit is one of nanosecond/ns, microsecond/us/µs, millisecond/ms, second/s, minu
 
 ## time.Format {#time_namespace_format}
 
-\([string](/documentation/reference/gotypes/#string)[any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\([string](/documentation/reference/gotypes/#string),[any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
 Format converts the textual representation of the datetime string into
 the other form or returns it of the time.Time value. These are formatted

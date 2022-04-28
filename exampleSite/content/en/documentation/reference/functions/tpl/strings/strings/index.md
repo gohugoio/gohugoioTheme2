@@ -127,7 +127,7 @@ CountWords returns the approximate word count in s.
 
 ## strings.FindRE {#strings_namespace_findre}
 
-\([string](/documentation/reference/gotypes/#string)[any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [](/documentation/reference/objects//)
+\([string](/documentation/reference/gotypes/#string),[any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [[]string](/documentation/reference/objects//[]string)
 {.funcsig}
 FindRE returns a list of strings that match the regular expression. By default all matches
 will be included. The number of matches can be limited with an optional third parameter.
@@ -208,7 +208,7 @@ Repeat returns a new string consisting of count copies of the string s.
 
 ## strings.Replace {#strings_namespace_replace}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [string](/documentation/reference/gotypes/#string)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
 Replace returns a copy of the string s with all occurrences of old replaced
 with new.  The number of replacements can be limited with an optional fourth
@@ -226,7 +226,7 @@ parameter.
 
 ## strings.ReplaceRE {#strings_namespace_replacere}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [string](/documentation/reference/gotypes/#string)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
 ReplaceRE returns a copy of s, replacing all matches of the regular
 expression pattern with the replacement text repl. The number of replacements
@@ -260,7 +260,7 @@ RuneCount returns the number of runes in s.
 
 ## strings.SliceString {#strings_namespace_slicestring}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [string](/documentation/reference/gotypes/#string)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
 SliceString slices a string by specifying a half-open range with
 two indices, start and end. 1 and 4 creates a slice including elements 1 through 3.
@@ -278,7 +278,7 @@ The end index can be omitted, it defaults to the string's length.
 
 ## strings.Split {#strings_namespace_split}
 
-\([any](/documentation/reference/gotypes/#any)[string](/documentation/reference/gotypes/#string)\) → [](/documentation/reference/objects//)
+\([any](/documentation/reference/gotypes/#any),[string](/documentation/reference/gotypes/#string)\) → [[]string](/documentation/reference/objects//[]string)
 {.funcsig}
 Split slices an input string into all substrings separated by delimiter.
 
@@ -294,7 +294,7 @@ Split slices an input string into all substrings separated by delimiter.
 
 ## strings.Substr {#strings_namespace_substr}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [string](/documentation/reference/gotypes/#string)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
 Substr extracts parts of a string, beginning at the character at the specified
 position, and returns the specified number of characters.
@@ -457,7 +457,7 @@ doesn't end with suffix, s is returned unchanged.
 
 ## strings.Truncate {#strings_namespace_truncate}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [HTML](/documentation/reference/objects/html/template/html)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [HTML](/documentation/reference/objects/html/template/html)
 {.funcsig}
 Truncate truncates a given string to the specified length.
 

@@ -83,7 +83,7 @@ TODO(bep) improve
 
 ## Suffixes {#media_type_suffixes}
 
-\(\) → [](/documentation/reference/objects//)
+\(\) → [[]string](/documentation/reference/objects//[]string)
 {.funcsig}
 Suffixes returns all valid file suffixes for this type.
 

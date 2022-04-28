@@ -97,7 +97,7 @@ text.
 
 ## transform.Highlight {#transform_namespace_highlight}
 
-\([any](/documentation/reference/gotypes/#any)[string](/documentation/reference/gotypes/#string)[](/documentation/reference/objects//)\) → [HTML](/documentation/reference/objects/html/template/html)
+\([any](/documentation/reference/gotypes/#any),[string](/documentation/reference/gotypes/#string),[...any](/documentation/reference/objects//...any)\) → [HTML](/documentation/reference/objects/html/template/html)
 {.funcsig}
 Highlight returns a copy of s as an HTML string with syntax
 highlighting applied.
@@ -114,7 +114,7 @@ highlighting applied.
 
 ## transform.HighlightCodeBlock {#transform_namespace_highlightcodeblock}
 
-\([CodeblockContext](/documentation/reference/objects/markup/converter/hooks/codeblockcontext)[](/documentation/reference/objects//)\) → [HightlightResult](/documentation/reference/objects/markup/highlight/hightlightresult)
+\([CodeblockContext](/documentation/reference/objects/markup/converter/hooks/codeblockcontext),[...any](/documentation/reference/objects//...any)\) → [HightlightResult](/documentation/reference/objects/markup/highlight/hightlightresult)
 {.funcsig}
 HighlightCodeBlock highlights a code block on the form received in the codeblock render hooks.
 
@@ -162,7 +162,7 @@ Plainify returns a copy of s with all HTML tags removed.
 
 ## transform.Remarshal {#transform_namespace_remarshal}
 
-\([string](/documentation/reference/gotypes/#string)[any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\([string](/documentation/reference/gotypes/#string),[any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
 Remarshal is used in the Hugo documentation to convert configuration
 examples from YAML to JSON, TOML (and possibly the other way around).
@@ -197,7 +197,7 @@ Format is one of json, yaml or toml.
 
 ## transform.Unmarshal {#transform_namespace_unmarshal}
 
-\([](/documentation/reference/objects//)\) → [any](/documentation/reference/gotypes/#any)
+\([...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 Unmarshal unmarshals the data given, which can be either a string, json.RawMessage
 or a Resource. Supported formats are JSON, TOML, YAML, and CSV.

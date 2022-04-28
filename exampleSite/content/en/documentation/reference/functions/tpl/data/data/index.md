@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## data.GetCSV {#data_namespace_getcsv}
 
-\([string](/documentation/reference/gotypes/#string)[](/documentation/reference/objects//)\) → [](/documentation/reference/objects//)
+\([string](/documentation/reference/gotypes/#string),[...any](/documentation/reference/objects//...any)\) → [[][]string](/documentation/reference/objects//[][]string)
 {.funcsig}
 GetCSV expects a data separator and one or n-parts of a URL to a resource which
 can either be a local or a remote one.
@@ -50,7 +50,7 @@ GetCSV returns nil or a slice slice to use in a short code.
 
 ## data.GetJSON {#data_namespace_getjson}
 
-\([](/documentation/reference/objects//)\) → [any](/documentation/reference/gotypes/#any)
+\([...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 GetJSON expects one or n-parts of a URL to a resource which can either be a local or a remote one.
 If you provide multiple parts they will be joined together to the final URL.

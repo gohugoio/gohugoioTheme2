@@ -63,7 +63,7 @@ It returns the value, which will be empty if the variable is not present.
 
 ## os.ReadDir {#os_namespace_readdir}
 
-\([any](/documentation/reference/gotypes/#any)\) → [](/documentation/reference/objects//)
+\([any](/documentation/reference/gotypes/#any)\) → [[]_os.FileInfo](/documentation/reference/objects//[]_os.fileinfo)
 {.funcsig}
 ReadDir lists the directory contents relative to the configured WorkingDir.
 

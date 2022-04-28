@@ -4,20 +4,20 @@
     {{ range $categories }}
       <a
         href="{{ .RelPermalink }}"
-        class="text-sm tracking-wider mb-0 link text-gray-500 dim mr-3">
+        class="text-sm tracking-tight mb-0 text-green-600 hover:text-green-500">
         {{ .Title | upper }}
       </a>
     {{ end }}
   </div>
 
-  <h1 class="text-3xl font-semibold leading-tight mb-3 my-0 text-black">
+  <h1 class="text-2xl font-semibold leading-tight mb-3 my-0 text-black">
     {{ .Title }}
   </h1>
 </header>
 
 <div class="mt-2 md:mt-4 prose lg:prose-lg" id="prose">
   {{ with .Params.description }}
-    <div class="text-base leading-relaxed mb-5">
+    <div class="text-lg leading-relaxed mb-5">
       {{ . | $.RenderString }}
     </div>
   {{ end }}
@@ -25,10 +25,10 @@
   {{ $tags := .GetTerms "tags" }}
   {{ range $tags }}
     {{ $color := partial "helpers/funcs/color-from-string" .LinkTitle }}
-    {{ $class := printf "text-%s-600 bg-%s-200" $color $color }}
+    {{ $class := printf "text-%s-%d bg-%s-%d border border-%s-%d shadow-md" $color.color $color.shade1 $color.color $color.shade2 $color.color  $color.shade1 }}
     <a
       href="{{ .RelPermalink }}"
-      class="{{ $class }} text-xs font-semibold no-underline inline-block py-1 px-2 uppercase rounded-full uppercase last:mr-0 mr-1 hover:opacity-75">
+      class="{{ $class }} text-xs font-semibold no-underline inline-block py-1 px-2 uppercase rounded-full uppercase last:mr-0 mr-1 hover:opacity-75 hover:shadow-none">
       {{ .LinkTitle | upper }}
     </a>
   {{ end }}

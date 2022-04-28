@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## collections.After {#collections_namespace_after}
 
-\([any](/documentation/reference/gotypes/#any)[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 After returns all the items after the first N in a rangeable list.
 
@@ -46,7 +46,7 @@ After returns all the items after the first N in a rangeable list.
 
 ## collections.Append {#collections_namespace_append}
 
-\([](/documentation/reference/objects//)\) → [any](/documentation/reference/gotypes/#any)
+\([...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 Append appends the arguments up to the last one to the slice in the last argument.
 This construct allows template constructs like this:
@@ -78,7 +78,7 @@ the first slice will be appended to the second:
 
 ## collections.Apply {#collections_namespace_apply}
 
-\([any](/documentation/reference/gotypes/#any)[string](/documentation/reference/gotypes/#string)[](/documentation/reference/objects//)\) → [any](/documentation/reference/gotypes/#any)
+\(,[any](/documentation/reference/gotypes/#any),[string](/documentation/reference/gotypes/#string),[...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 Apply takes a map, array, or slice and returns a new slice with the function fname applied over it.
 
@@ -94,7 +94,7 @@ Apply takes a map, array, or slice and returns a new slice with the function fna
 
 ## collections.Complement {#collections_namespace_complement}
 
-\([](/documentation/reference/objects//)\) → [any](/documentation/reference/gotypes/#any)
+\([...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 Complement gives the elements in the last element of seqs that are not in
 any of the others.
@@ -120,7 +120,7 @@ The reasoning behind this rather clumsy API is so we can do this in the template
 
 ## collections.Delimit {#collections_namespace_delimit}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [HTML](/documentation/reference/objects/html/template/html)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [HTML](/documentation/reference/objects/html/template/html)
 {.funcsig}
 Delimit takes a given sequence and returns a delimited HTML string.
 If last is passed to the function, it will be used as the final delimiter.
@@ -137,7 +137,7 @@ If last is passed to the function, it will be used as the final delimiter.
 
 ## collections.Dictionary {#collections_namespace_dictionary}
 
-\([](/documentation/reference/objects//)\) → [](/documentation/reference/objects//)
+\([...any](/documentation/reference/objects//...any)\) → [map[string]any](/documentation/reference/objects//map[string]any)
 {.funcsig}
 Dictionary creates a map[string]interface{} from the given parameters by
 walking the parameters and treating them as key-value pairs.  The number
@@ -173,7 +173,7 @@ empty string.
 
 ## collections.First {#collections_namespace_first}
 
-\([any](/documentation/reference/gotypes/#any)[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 First returns the first N items in a rangeable list.
 
@@ -189,7 +189,7 @@ First returns the first N items in a rangeable list.
 
 ## collections.Group {#collections_namespace_group}
 
-\([any](/documentation/reference/gotypes/#any)[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 Group groups a set of elements by the given key.
 This is currently only supported for  [Pages](/documentation/reference/objects/resources/page/pages) .
@@ -206,7 +206,7 @@ This is currently only supported for  [Pages](/documentation/reference/objects/r
 
 ## collections.In {#collections_namespace_in}
 
-\([any](/documentation/reference/gotypes/#any)[any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
+\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
 In returns whether v is in the set l.  l may be an array or slice.
 
@@ -222,7 +222,7 @@ In returns whether v is in the set l.  l may be an array or slice.
 
 ## collections.Index {#collections_namespace_index}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [any](/documentation/reference/gotypes/#any)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 Index returns the result of indexing its first argument by the following
 arguments. Thus "index x 1 2 3" is, in Go syntax, x[1][2][3]. Each
@@ -263,7 +263,7 @@ l2 must be of the same type and may be either arrays or slices.
 
 ## collections.IsSet {#collections_namespace_isset}
 
-\([any](/documentation/reference/gotypes/#any)[any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
+\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
 IsSet returns whether a given array, channel, slice, or map has a key
 defined.
@@ -280,7 +280,7 @@ defined.
 
 ## collections.KeyVals {#collections_namespace_keyvals}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [KeyValues](/documentation/reference/objects/common/types/keyvalues)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [KeyValues](/documentation/reference/objects/common/types/keyvalues)
 {.funcsig}
 KeyVals creates a key and values wrapper.
 
@@ -296,7 +296,7 @@ KeyVals creates a key and values wrapper.
 
 ## collections.Last {#collections_namespace_last}
 
-\([any](/documentation/reference/gotypes/#any)[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 Last returns the last N items in a rangeable list.
 
@@ -312,7 +312,7 @@ Last returns the last N items in a rangeable list.
 
 ## collections.Merge {#collections_namespace_merge}
 
-\([](/documentation/reference/objects//)\) → [any](/documentation/reference/gotypes/#any)
+\([...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 Merge creates a copy of the final parameter and merges the preceding
 parameters into it in reverse order.
@@ -330,7 +330,7 @@ Currently only maps are supported. Key handling is case insensitive.
 
 ## collections.NewScratch {#collections_namespace_newscratch}
 
-\(\) → [](/documentation/reference/objects//)
+\(\) → [*maps.Scratch](/documentation/reference/objects//*maps.scratch)
 {.funcsig}
 NewScratch creates a new Scratch which can be used to store values in a
 thread safe way.
@@ -347,7 +347,7 @@ thread safe way.
 
 ## collections.Querify {#collections_namespace_querify}
 
-\([](/documentation/reference/objects//)\) → [string](/documentation/reference/gotypes/#string)
+\([...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
 Querify encodes the given parameters in URL-encoded form ("bar=baz&foo=quux") sorted by key.
 
@@ -379,7 +379,7 @@ Reverse creates a copy of slice and reverses it.
 
 ## collections.Seq {#collections_namespace_seq}
 
-\([](/documentation/reference/objects//)\) → [](/documentation/reference/objects//)
+\([...any](/documentation/reference/objects//...any)\) → [[]int](/documentation/reference/objects//[]int)
 {.funcsig}
 Seq creates a sequence of integers.  It's named and used as GNU's seq.
 
@@ -427,7 +427,7 @@ Shuffle returns the given rangeable list in a randomised order.
 
 ## collections.Slice {#collections_namespace_slice}
 
-\([](/documentation/reference/objects//)\) → [any](/documentation/reference/gotypes/#any)
+\([...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 Slice returns a slice of all passed arguments.
 
@@ -443,7 +443,7 @@ Slice returns a slice of all passed arguments.
 
 ## collections.Sort {#collections_namespace_sort}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [any](/documentation/reference/gotypes/#any)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 Sort returns a sorted sequence.
 
@@ -512,7 +512,7 @@ duplicate elements removed.
 
 ## collections.Where {#collections_namespace_where}
 
-\([any](/documentation/reference/gotypes/#any)[](/documentation/reference/objects//)\) → [any](/documentation/reference/gotypes/#any)
+\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
 Where returns a filtered subset of a given data type.
 
