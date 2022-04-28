@@ -25,6 +25,20 @@ disableAliases = true
 writeStats = true
 useResourceCacheWhen = 'never'
 
+[caches]
+[caches.assets]
+dir = ':resourceDir/_gen'
+maxAge = -1
+[caches.getresource]
+dir = ':cacheDir/:project'
+maxAge = "1440h"
+[caches.images]
+dir = ":cacheDir/images"
+maxAge = "1440h"
+[caches.modules]
+dir = ':cacheDir/modules'
+maxAge = "1440h"
+
 [params]
 ghrepo = "https://github.com/gohugoio/hugoDocs/"
 
