@@ -67,39 +67,6 @@ source = "content/en"
 target = "content"
 [[module.imports]]
 path = "github.com/gohugoio/gohugoioTheme2"
-[[module.imports]]
-path = "github.com/gohugoio/hugoDocs"
-disable = false
-ignoreConfig = true
-ignoreImports = true
-[[module.imports.mounts]]
-lang = "en"
-source = "content/site/en"
-target = "content"
-
-[[module.imports.mounts]]
-source = "static"
-target = "static"
-
-[[module.imports.mounts]]
-source = "layouts"
-target = "layouts"
-
-[[module.imports.mounts]]
-source = "data"
-target = "data"
-
-[[module.imports.mounts]]
-source = "assets"
-target = "assets"
-
-[[module.imports.mounts]]
-source = "i18n"
-target = "i18n"
-
-[[module.imports.mounts]]
-source = "archetypes"
-target = "archetypes"
 
 [outputs]
 home = [ "HTML", "RSS", "REDIR", "HEADERS", "DOCTREE" ]
