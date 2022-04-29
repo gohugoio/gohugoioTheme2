@@ -30,10 +30,11 @@ hugoSymbol: TODO
 
 ## js.Build {#js_namespace_build}
 
-\([...any](/documentation/reference/objects//...any)\) → [Resource](/documentation/reference/objects/resources/resource/resource)
+\(args [...any](/documentation/reference/gotypes/#any)\) → [Resource](/documentation/reference/objects/resources/resource/resource)
 {.funcsig}
-Build processes the given Resource with ESBuild.
 
+
+Build processes the given Resource with ESBuild.
 
 {{< docs/func-aliases "js.Build" >}}
 {{< docs/func-examples "js.Build" >}}

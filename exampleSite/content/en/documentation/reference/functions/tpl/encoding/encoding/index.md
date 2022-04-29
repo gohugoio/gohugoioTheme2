@@ -30,10 +30,11 @@ hugoSymbol: TODO
 
 ## encoding.Base64Decode {#encoding_namespace_base64decode}
 
-\([any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(content [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Base64Decode returns the base64 decoding of the given content.
 
+
+Base64Decode returns the base64 decoding of the given `content`.
 
 {{< docs/func-aliases "encoding.Base64Decode" >}}
 {{< docs/func-examples "encoding.Base64Decode" >}}
@@ -46,10 +47,11 @@ Base64Decode returns the base64 decoding of the given content.
 
 ## encoding.Base64Encode {#encoding_namespace_base64encode}
 
-\([any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(content [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Base64Encode returns the base64 encoding of the given content.
 
+
+Base64Encode returns the base64 encoding of the given `content`.
 
 {{< docs/func-aliases "encoding.Base64Encode" >}}
 {{< docs/func-examples "encoding.Base64Encode" >}}
@@ -62,14 +64,15 @@ Base64Encode returns the base64 encoding of the given content.
 
 ## encoding.Jsonify {#encoding_namespace_jsonify}
 
-\([...any](/documentation/reference/objects//...any)\) → [HTML](/documentation/reference/objects/html/template/html)
+\(args [...any](/documentation/reference/gotypes/#any)\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
 {.funcsig}
+
+
 Jsonify encodes a given object to JSON.  To pretty print the JSON, pass a map
 or dictionary of options as the first argument.  Supported options are
 "prefix" and "indent".  Each JSON element in the output will begin on a new
 line beginning with prefix followed by one or more copies of indent according
 to the indentation nesting.
-
 
 {{< docs/func-aliases "encoding.Jsonify" >}}
 {{< docs/func-examples "encoding.Jsonify" >}}

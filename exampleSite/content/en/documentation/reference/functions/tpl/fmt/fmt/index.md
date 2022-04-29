@@ -30,11 +30,12 @@ hugoSymbol: TODO
 
 ## fmt.Errorf {#fmt_namespace_errorf}
 
-\([string](/documentation/reference/gotypes/#string),[...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
+\(format [string](/documentation/reference/gotypes/#string), a [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Errorf formats according to a format specifier and logs an ERROR.
-It returns an empty string.
 
+
+Errorf formats according to `a` `format` specifier and logs an ERROR.
+It returns an empty string.
 
 {{< docs/func-aliases "fmt.Errorf" >}}
 {{< docs/func-examples "fmt.Errorf" >}}
@@ -47,12 +48,13 @@ It returns an empty string.
 
 ## fmt.Erroridf {#fmt_namespace_erroridf}
 
-\([string](/documentation/reference/gotypes/#string),[...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
+\(id [string](/documentation/reference/gotypes/#string), a [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Erroridf formats according to a format specifier and logs an ERROR and
+
+
+Erroridf formats according to `a` format specifier and logs an ERROR and
 an information text that the error with the given ID can be suppressed in config.
 It returns an empty string.
-
 
 {{< docs/func-aliases "fmt.Erroridf" >}}
 {{< docs/func-examples "fmt.Erroridf" >}}
@@ -65,10 +67,11 @@ It returns an empty string.
 
 ## fmt.Print {#fmt_namespace_print}
 
-\([...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
+\(a [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Print returns string representation of the passed arguments.
 
+
+Print returns string representation of the passed arguments.
 
 {{< docs/func-aliases "fmt.Print" >}}
 {{< docs/func-examples "fmt.Print" >}}
@@ -81,10 +84,11 @@ Print returns string representation of the passed arguments.
 
 ## fmt.Printf {#fmt_namespace_printf}
 
-\([string](/documentation/reference/gotypes/#string),[...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
+\(format [string](/documentation/reference/gotypes/#string), a [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Printf returns a formatted string representation of the passed arguments.
 
+
+Printf returns `a` formatted string representation of the passed arguments.
 
 {{< docs/func-aliases "fmt.Printf" >}}
 {{< docs/func-examples "fmt.Printf" >}}
@@ -97,10 +101,11 @@ Printf returns a formatted string representation of the passed arguments.
 
 ## fmt.Println {#fmt_namespace_println}
 
-\([...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
+\(a [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Println returns string representation of the passed arguments ending with a newline.
 
+
+Println returns string representation of the passed arguments ending with `a` newline.
 
 {{< docs/func-aliases "fmt.Println" >}}
 {{< docs/func-examples "fmt.Println" >}}
@@ -113,11 +118,12 @@ Println returns string representation of the passed arguments ending with a newl
 
 ## fmt.Warnf {#fmt_namespace_warnf}
 
-\([string](/documentation/reference/gotypes/#string),[...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
+\(format [string](/documentation/reference/gotypes/#string), a [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Warnf formats according to a format specifier and logs a WARNING.
-It returns an empty string.
 
+
+Warnf formats according to `a` `format` specifier and logs `a` WARNING.
+It returns an empty string.
 
 {{< docs/func-aliases "fmt.Warnf" >}}
 {{< docs/func-examples "fmt.Warnf" >}}

@@ -89,8 +89,9 @@ Weight
 
 \(\) → [Params](/documentation/reference/objects/common/maps/params)
 {.funcsig}
-Params returns language-specific params merged with the global params.
 
+
+Params returns language-specific params merged with the global params.
 
 
 

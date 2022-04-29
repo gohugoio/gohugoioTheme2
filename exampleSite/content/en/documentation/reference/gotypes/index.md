@@ -10,6 +10,11 @@ Consectetur dolore ut fugiat reprehenderit consequat eiusmod adipisicing consect
 
 Adipisicing minim culpa qui magna amet Lorem fugiat sit proident mollit. Magna sint cupidatat ut sint sit commodo irure. Deserunt consectetur cupidatat aliquip magna non aliquip nulla anim. Quis excepteur occaecat ipsum ad consectetur eiusmod excepteur ipsum. Ullamco sunt velit enim dolore voluptate.
 
+## float
+
+Fugiat ullamco enim ipsum sit fugiat ullamco duis aliqua. Occaecat veniam do commodo ea aliquip consectetur. Est nisi proident voluptate sunt Lorem eiusmod ut nisi laborum adipisicing labore ut in. Mollit eiusmod est Lorem minim velit Lorem sint fugiat nulla quis ex. Elit ipsum velit magna anim duis nostrud adipisicing laboris. Minim laborum non est dolor sit et velit duis nisi consequat aute consequat qui eu.
+
+Sit aute proident velit exercitation esse culpa aliquip commodo fugiat aliqua. Ut reprehenderit aute magna irure elit sit ad. Minim excepteur quis ad mollit non. Lorem duis sunt anim cillum pariatur elit sunt cillum. Qui pariatur ea laborum sint aute Lorem nostrud ullamco. Est duis enim sunt dolor irure nisi sunt proident occaecat dolor.
 
 ## bool
 
@@ -17,6 +22,11 @@ Eu consequat irure labore sit. Occaecat quis tempor veniam tempor quis ullamco i
 
 Irure officia proident commodo consequat ipsum quis duis duis irure. Cillum amet culpa ad veniam pariatur consequat. Elit voluptate laborum quis sunt consequat.
 
+## map[string]any
+
+Pariatur Lorem magna ea exercitation consectetur nisi. Magna nulla sunt exercitation fugiat dolore ullamco est sit sint do do. Ex nisi in nulla dolor est aute. Qui est deserunt velit laboris proident tempor. Deserunt proident sint cillum irure nulla esse elit tempor voluptate. Duis est adipisicing reprehenderit aliquip dolor ex enim reprehenderit. Nostrud pariatur ex do sit velit duis non velit nisi.
+
+Eu aliquip qui incididunt quis aliqua. Eu elit anim ullamco dolore aliqua officia dolore. Laborum proident enim et laborum amet.
 
 ## string
 

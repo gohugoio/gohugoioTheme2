@@ -30,8 +30,10 @@ hugoSymbol: TODO
 
 ## openapi3.Unmarshal {#openapi3_namespace_unmarshal}
 
-\([UnmarshableResource](/documentation/reference/objects/resources/resource/unmarshableresource)\) → [*kopenapi3.T](/documentation/reference/objects//*kopenapi3.t)
+\(r [Resource](/documentation/reference/objects/resources/resource/resource)\) → [kopenapi3.T](/documentation/reference/objects//kopenapi3.t)
 {.funcsig}
+
+
 
 {{< docs/func-aliases "openapi3.Unmarshal" >}}
 {{< docs/func-examples "openapi3.Unmarshal" >}}

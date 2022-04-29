@@ -30,10 +30,11 @@ hugoSymbol: TODO
 
 ## collections.After {#collections_namespace_after}
 
-\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(index [any](/documentation/reference/gotypes/#any), seq [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-After returns all the items after the first N in a rangeable list.
 
+
+After returns all the items after the first N in a rangeable list.
 
 {{< docs/func-aliases "collections.After" >}}
 {{< docs/func-examples "collections.After" >}}
@@ -46,26 +47,16 @@ After returns all the items after the first N in a rangeable list.
 
 ## collections.Append {#collections_namespace_append}
 
-\([...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
+\(args [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
+
+
 Append appends the arguments up to the last one to the slice in the last argument.
 This construct allows template constructs like this:
-
-
-```go-html-template
-{{ $pages = $pages | append $p2 $p1 }}
-
-
-```
+    {{ $pages = $pages | append $p2 $p1 }}
 Note that with 2 arguments where both are slices of the same type,
 the first slice will be appended to the second:
-
-
-```go-html-template
-{{ $pages = $pages | append .Site.RegularPages }}
-
-
-```
+    {{ $pages = $pages | append .Site.RegularPages }}
 
 {{< docs/func-aliases "collections.Append" >}}
 {{< docs/func-examples "collections.Append" >}}
@@ -78,10 +69,11 @@ the first slice will be appended to the second:
 
 ## collections.Apply {#collections_namespace_apply}
 
-\(,[any](/documentation/reference/gotypes/#any),[string](/documentation/reference/gotypes/#string),[...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
+\(seq [any](/documentation/reference/gotypes/#any), fname [string](/documentation/reference/gotypes/#string), args [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-Apply takes a map, array, or slice and returns a new slice with the function fname applied over it.
 
+
+Apply takes a map, array, or slice and returns a new slice with the function `fname` applied over it.
 
 {{< docs/func-aliases "collections.Apply" >}}
 {{< docs/func-examples "collections.Apply" >}}
@@ -94,20 +86,16 @@ Apply takes a map, array, or slice and returns a new slice with the function fna
 
 ## collections.Complement {#collections_namespace_complement}
 
-\([...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
+\(seqs [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-Complement gives the elements in the last element of seqs that are not in
+
+
+Complement gives the elements in the last element of `seqs` that are not in
 any of the others.
-All elements of seqs must be slices or arrays of comparable types.
+All elements of `seqs` must be slices or arrays of comparable types.
 
 The reasoning behind this rather clumsy API is so we can do this in the templates:
-
-
-```go-html-template
-{{ $c := .Pages | complement $last4 }}
-
-
-```
+   {{ $c := .Pages | complement $last4 }}
 
 {{< docs/func-aliases "collections.Complement" >}}
 {{< docs/func-examples "collections.Complement" >}}
@@ -120,11 +108,12 @@ The reasoning behind this rather clumsy API is so we can do this in the template
 
 ## collections.Delimit {#collections_namespace_delimit}
 
-\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [HTML](/documentation/reference/objects/html/template/html)
+\(seq [any](/documentation/reference/gotypes/#any), last [...any](/documentation/reference/gotypes/#any)\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
 {.funcsig}
-Delimit takes a given sequence and returns a delimited HTML string.
-If last is passed to the function, it will be used as the final delimiter.
 
+
+Delimit takes a given sequence and returns a delimited HTML string.
+If `last` is passed to the function, it will be used as the final delimiter.
 
 {{< docs/func-aliases "collections.Delimit" >}}
 {{< docs/func-examples "collections.Delimit" >}}
@@ -137,13 +126,14 @@ If last is passed to the function, it will be used as the final delimiter.
 
 ## collections.Dictionary {#collections_namespace_dictionary}
 
-\([...any](/documentation/reference/objects//...any)\) → [map[string]any](/documentation/reference/objects//map[string]any)
+\(values [...any](/documentation/reference/gotypes/#any)\) → [map[string]any](/documentation/reference/gotypes/#mapstringany)
 {.funcsig}
+
+
 Dictionary creates a map[string]interface{} from the given parameters by
 walking the parameters and treating them as key-value pairs.  The number
 of parameters must be even.
 The keys can be string slices, which will create the needed nested structure.
-
 
 {{< docs/func-aliases "collections.Dictionary" >}}
 {{< docs/func-examples "collections.Dictionary" >}}
@@ -156,11 +146,12 @@ The keys can be string slices, which will create the needed nested structure.
 
 ## collections.EchoParam {#collections_namespace_echoparam}
 
-\([any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(a [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-EchoParam returns a given value if it is set; otherwise, it returns an
-empty string.
 
+
+EchoParam returns `a` given value if it is set; otherwise, it returns an
+empty string.
 
 {{< docs/func-aliases "collections.EchoParam" >}}
 {{< docs/func-examples "collections.EchoParam" >}}
@@ -173,10 +164,11 @@ empty string.
 
 ## collections.First {#collections_namespace_first}
 
-\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(limit [any](/documentation/reference/gotypes/#any), seq [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-First returns the first N items in a rangeable list.
 
+
+First returns the first N items in a rangeable list.
 
 {{< docs/func-aliases "collections.First" >}}
 {{< docs/func-examples "collections.First" >}}
@@ -189,11 +181,12 @@ First returns the first N items in a rangeable list.
 
 ## collections.Group {#collections_namespace_group}
 
-\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(key [any](/documentation/reference/gotypes/#any), items [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-Group groups a set of elements by the given key.
-This is currently only supported for  [Pages](/documentation/reference/objects/resources/page/pages) .
 
+
+Group groups a set of elements by the given `key`.
+This is currently only supported for Pages.
 
 {{< docs/func-aliases "collections.Group" >}}
 {{< docs/func-examples "collections.Group" >}}
@@ -206,10 +199,11 @@ This is currently only supported for  [Pages](/documentation/reference/objects/r
 
 ## collections.In {#collections_namespace_in}
 
-\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(l [any](/documentation/reference/gotypes/#any), v [any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
-In returns whether v is in the set l.  l may be an array or slice.
 
+
+In returns whether `v` is in the set `l`.  `l` may be an array or slice.
 
 {{< docs/func-aliases "collections.In" >}}
 {{< docs/func-examples "collections.In" >}}
@@ -222,18 +216,19 @@ In returns whether v is in the set l.  l may be an array or slice.
 
 ## collections.Index {#collections_namespace_index}
 
-\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
+\(item [any](/documentation/reference/gotypes/#any), args [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
+
+
 Index returns the result of indexing its first argument by the following
 arguments. Thus "index x 1 2 3" is, in Go syntax, x[1][2][3]. Each
-indexed item must be a map, slice, or array.
+indexed `item` must be a map, slice, or array.
 
 Copied from Go stdlib src/text/template/funcs.go.
 
-We deviate from the stdlib due to <a href="https://github.com/golang/go/issues/14751">https://github.com/golang/go/issues/14751</a>.
+We deviate from the stdlib due to https://github.com/golang/go/issues/14751.
 
 TODO(moorereason): merge upstream changes.
-
 
 {{< docs/func-aliases "collections.Index" >}}
 {{< docs/func-examples "collections.Index" >}}
@@ -246,11 +241,12 @@ TODO(moorereason): merge upstream changes.
 
 ## collections.Intersect {#collections_namespace_intersect}
 
-\([any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(l1 [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-Intersect returns the common elements in the given sets, l1 and l2.  l1 and
-l2 must be of the same type and may be either arrays or slices.
 
+
+Intersect returns the common elements in the given sets, `l1` and l2.  `l1` and
+l2 must be of the same type and may be either arrays or slices.
 
 {{< docs/func-aliases "collections.Intersect" >}}
 {{< docs/func-examples "collections.Intersect" >}}
@@ -263,11 +259,12 @@ l2 must be of the same type and may be either arrays or slices.
 
 ## collections.IsSet {#collections_namespace_isset}
 
-\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(a [any](/documentation/reference/gotypes/#any), key [any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
-IsSet returns whether a given array, channel, slice, or map has a key
-defined.
 
+
+IsSet returns whether `a` given array, channel, slice, or map has `a` `key`
+defined.
 
 {{< docs/func-aliases "collections.IsSet" >}}
 {{< docs/func-examples "collections.IsSet" >}}
@@ -280,10 +277,11 @@ defined.
 
 ## collections.KeyVals {#collections_namespace_keyvals}
 
-\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [KeyValues](/documentation/reference/objects/common/types/keyvalues)
+\(key [any](/documentation/reference/gotypes/#any), vals [...any](/documentation/reference/gotypes/#any)\) → [KeyValues](/documentation/reference/objects/common/types/keyvalues)
 {.funcsig}
-KeyVals creates a key and values wrapper.
 
+
+KeyVals creates a `key` and values wrapper.
 
 {{< docs/func-aliases "collections.KeyVals" >}}
 {{< docs/func-examples "collections.KeyVals" >}}
@@ -296,10 +294,11 @@ KeyVals creates a key and values wrapper.
 
 ## collections.Last {#collections_namespace_last}
 
-\([any](/documentation/reference/gotypes/#any),[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(limit [any](/documentation/reference/gotypes/#any), seq [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-Last returns the last N items in a rangeable list.
 
+
+Last returns the last N items in a rangeable list.
 
 {{< docs/func-aliases "collections.Last" >}}
 {{< docs/func-examples "collections.Last" >}}
@@ -312,12 +311,13 @@ Last returns the last N items in a rangeable list.
 
 ## collections.Merge {#collections_namespace_merge}
 
-\([...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
+\(params [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
+
+
 Merge creates a copy of the final parameter and merges the preceding
 parameters into it in reverse order.
 Currently only maps are supported. Key handling is case insensitive.
-
 
 {{< docs/func-aliases "collections.Merge" >}}
 {{< docs/func-examples "collections.Merge" >}}
@@ -330,11 +330,12 @@ Currently only maps are supported. Key handling is case insensitive.
 
 ## collections.NewScratch {#collections_namespace_newscratch}
 
-\(\) → [*maps.Scratch](/documentation/reference/objects//*maps.scratch)
+\(\) → [maps.Scratch](/documentation/reference/objects//maps.scratch)
 {.funcsig}
+
+
 NewScratch creates a new Scratch which can be used to store values in a
 thread safe way.
-
 
 {{< docs/func-aliases "collections.NewScratch" >}}
 {{< docs/func-examples "collections.NewScratch" >}}
@@ -347,10 +348,11 @@ thread safe way.
 
 ## collections.Querify {#collections_namespace_querify}
 
-\([...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
+\(params [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Querify encodes the given parameters in URL-encoded form ("bar=baz&foo=quux") sorted by key.
 
+
+Querify encodes the given parameters in URL-encoded form ("bar=baz&foo=quux") sorted by key.
 
 {{< docs/func-aliases "collections.Querify" >}}
 {{< docs/func-examples "collections.Querify" >}}
@@ -363,10 +365,11 @@ Querify encodes the given parameters in URL-encoded form ("bar=baz&foo=quux") so
 
 ## collections.Reverse {#collections_namespace_reverse}
 
-\([any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(slice [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-Reverse creates a copy of slice and reverses it.
 
+
+Reverse creates a copy of `slice` and reverses it.
 
 {{< docs/func-aliases "collections.Reverse" >}}
 {{< docs/func-examples "collections.Reverse" >}}
@@ -379,26 +382,18 @@ Reverse creates a copy of slice and reverses it.
 
 ## collections.Seq {#collections_namespace_seq}
 
-\([...any](/documentation/reference/objects//...any)\) → [[]int](/documentation/reference/objects//[]int)
+\(args [...any](/documentation/reference/gotypes/#any)\) → [[]int](/documentation/reference/gotypes/#int)
 {.funcsig}
+
+
 Seq creates a sequence of integers.  It's named and used as GNU's seq.
 
 Examples:
-
-
-```go-html-template
-3 => 1, 2, 3
-
-1 2 4 => 1, 3
-
--3 => -1, -2, -3
-
-1 4 => 1, 2, 3, 4
-
-1 -2 => 1, 0, -1, -2
-
-
-```
+    3 => 1, 2, 3
+    1 2 4 => 1, 3
+    -3 => -1, -2, -3
+    1 4 => 1, 2, 3, 4
+    1 -2 => 1, 0, -1, -2
 
 {{< docs/func-aliases "collections.Seq" >}}
 {{< docs/func-examples "collections.Seq" >}}
@@ -411,10 +406,11 @@ Examples:
 
 ## collections.Shuffle {#collections_namespace_shuffle}
 
-\([any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(seq [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-Shuffle returns the given rangeable list in a randomised order.
 
+
+Shuffle returns the given rangeable list in a randomised order.
 
 {{< docs/func-aliases "collections.Shuffle" >}}
 {{< docs/func-examples "collections.Shuffle" >}}
@@ -427,10 +423,11 @@ Shuffle returns the given rangeable list in a randomised order.
 
 ## collections.Slice {#collections_namespace_slice}
 
-\([...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
+\(args [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-Slice returns a slice of all passed arguments.
 
+
+Slice returns a slice of all passed arguments.
 
 {{< docs/func-aliases "collections.Slice" >}}
 {{< docs/func-examples "collections.Slice" >}}
@@ -443,10 +440,11 @@ Slice returns a slice of all passed arguments.
 
 ## collections.Sort {#collections_namespace_sort}
 
-\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
+\(seq [any](/documentation/reference/gotypes/#any), args [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-Sort returns a sorted sequence.
 
+
+Sort returns a sorted sequence.
 
 {{< docs/func-aliases "collections.Sort" >}}
 {{< docs/func-examples "collections.Sort" >}}
@@ -459,11 +457,12 @@ Sort returns a sorted sequence.
 
 ## collections.SymDiff {#collections_namespace_symdiff}
 
-\([any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(s2 [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-SymDiff returns the symmetric difference of s1 and s2.
-Arguments must be either a slice or an array of comparable types.
 
+
+SymDiff returns the symmetric difference of s1 and `s2`.
+Arguments must be either a slice or an array of comparable types.
 
 {{< docs/func-aliases "collections.SymDiff" >}}
 {{< docs/func-examples "collections.SymDiff" >}}
@@ -476,13 +475,14 @@ Arguments must be either a slice or an array of comparable types.
 
 ## collections.Union {#collections_namespace_union}
 
-\([any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(l1 [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-Union returns the union of the given sets, l1 and l2. l1 and
-l2 must be of the same type and may be either arrays or slices.
-If l1 and l2 aren't of the same type then l1 will be returned.
-If either l1 or l2 is nil then the non-nil list will be returned.
 
+
+Union returns the union of the given sets, `l1` and l2. `l1` and
+l2 must be of the same type and may be either arrays or slices.
+If `l1` and l2 aren't of the same type then `l1` will be returned.
+If either `l1` or l2 is nil then the non-nil list will be returned.
 
 {{< docs/func-aliases "collections.Union" >}}
 {{< docs/func-examples "collections.Union" >}}
@@ -495,11 +495,12 @@ If either l1 or l2 is nil then the non-nil list will be returned.
 
 ## collections.Uniq {#collections_namespace_uniq}
 
-\([any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(seq [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
+
+
 Uniq takes in a slice or array and returns a slice with subsequent
 duplicate elements removed.
-
 
 {{< docs/func-aliases "collections.Uniq" >}}
 {{< docs/func-examples "collections.Uniq" >}}
@@ -512,10 +513,11 @@ duplicate elements removed.
 
 ## collections.Where {#collections_namespace_where}
 
-\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
+\(seq [any](/documentation/reference/gotypes/#any), args [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-Where returns a filtered subset of a given data type.
 
+
+Where returns a filtered subset of a given data type.
 
 {{< docs/func-aliases "collections.Where" >}}
 {{< docs/func-examples "collections.Where" >}}
