@@ -30,10 +30,11 @@ hugoSymbol: TODO
 
 ## safe.CSS {#safe_namespace_css}
 
-\([any](/documentation/reference/gotypes/#any)\) → [CSS](/documentation/reference/objects/html/template/css)
+\(a [any](/documentation/reference/gotypes/#any)\) → [CSS](/documentation/reference/objects/html/template/css)
 {.funcsig}
-CSS returns a given string as html/template CSS content.
 
+
+CSS returns `a` given string as html/template CSS content.
 
 {{< docs/func-aliases "safe.CSS" >}}
 {{< docs/func-examples "safe.CSS" >}}
@@ -46,10 +47,11 @@ CSS returns a given string as html/template CSS content.
 
 ## safe.HTML {#safe_namespace_html}
 
-\([any](/documentation/reference/gotypes/#any)\) → [HTML](/documentation/reference/objects/html/template/html)
+\(a [any](/documentation/reference/gotypes/#any)\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
 {.funcsig}
-HTML returns a given string as html/template HTML content.
 
+
+HTML returns `a` given string as html/template HTML content.
 
 {{< docs/func-aliases "safe.HTML" >}}
 {{< docs/func-examples "safe.HTML" >}}
@@ -62,10 +64,11 @@ HTML returns a given string as html/template HTML content.
 
 ## safe.HTMLAttr {#safe_namespace_htmlattr}
 
-\([any](/documentation/reference/gotypes/#any)\) → [HTMLAttr](/documentation/reference/objects/html/template/htmlattr)
+\(a [any](/documentation/reference/gotypes/#any)\) → [HTMLAttr](/documentation/reference/objects/html/template/htmlattr)
 {.funcsig}
-HTMLAttr returns a given string as html/template HTMLAttr content.
 
+
+HTMLAttr returns `a` given string as html/template HTMLAttr content.
 
 {{< docs/func-aliases "safe.HTMLAttr" >}}
 {{< docs/func-examples "safe.HTMLAttr" >}}
@@ -78,10 +81,11 @@ HTMLAttr returns a given string as html/template HTMLAttr content.
 
 ## safe.JS {#safe_namespace_js}
 
-\([any](/documentation/reference/gotypes/#any)\) → [JS](/documentation/reference/objects/html/template/js)
+\(a [any](/documentation/reference/gotypes/#any)\) → [JS](/documentation/reference/objects/html/template/js)
 {.funcsig}
-JS returns the given string as a html/template JS content.
 
+
+JS returns the given string as `a` html/template JS content.
 
 {{< docs/func-aliases "safe.JS" >}}
 {{< docs/func-examples "safe.JS" >}}
@@ -94,10 +98,11 @@ JS returns the given string as a html/template JS content.
 
 ## safe.JSStr {#safe_namespace_jsstr}
 
-\([any](/documentation/reference/gotypes/#any)\) → [JSStr](/documentation/reference/objects/html/template/jsstr)
+\(a [any](/documentation/reference/gotypes/#any)\) → [JSStr](/documentation/reference/objects/html/template/jsstr)
 {.funcsig}
-JSStr returns the given string as a html/template JSStr content.
 
+
+JSStr returns the given string as `a` html/template JSStr content.
 
 {{< docs/func-aliases "safe.JSStr" >}}
 {{< docs/func-examples "safe.JSStr" >}}
@@ -110,10 +115,11 @@ JSStr returns the given string as a html/template JSStr content.
 
 ## safe.SanitizeURL {#safe_namespace_sanitizeurl}
 
-\([any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(a [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-SanitizeURL returns a given string as html/template URL content.
 
+
+SanitizeURL returns `a` given string as html/template URL content.
 
 {{< docs/func-aliases "safe.SanitizeURL" >}}
 {{< docs/func-examples "safe.SanitizeURL" >}}
@@ -126,10 +132,11 @@ SanitizeURL returns a given string as html/template URL content.
 
 ## safe.URL {#safe_namespace_url}
 
-\([any](/documentation/reference/gotypes/#any)\) → [URL](/documentation/reference/objects/html/template/url)
+\(a [any](/documentation/reference/gotypes/#any)\) → [URL](/documentation/reference/objects/html/template/url)
 {.funcsig}
-URL returns a given string as html/template URL content.
 
+
+URL returns `a` given string as html/template URL content.
 
 {{< docs/func-aliases "safe.URL" >}}
 {{< docs/func-examples "safe.URL" >}}

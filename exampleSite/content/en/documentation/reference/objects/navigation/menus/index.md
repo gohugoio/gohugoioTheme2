@@ -33,8 +33,9 @@ keywords:
 
 \(\) → [Menu](/documentation/reference/objects//menu)
 {.funcsig}
-ByName sorts the menu by the name defined in the menu configuration.
 
+
+ByName sorts the menu by the name defined in the menu configuration.
 
 
 
@@ -46,8 +47,9 @@ ByName sorts the menu by the name defined in the menu configuration.
 
 \(\) → [Menu](/documentation/reference/objects//menu)
 {.funcsig}
-ByWeight sorts the menu by the weight defined in the menu configuration.
 
+
+ByWeight sorts the menu by the weight defined in the menu configuration.
 
 
 
@@ -59,10 +61,11 @@ ByWeight sorts the menu by the weight defined in the menu configuration.
 
 ## Limit {#navigation_menu_limit}
 
-\([int](/documentation/reference/gotypes/#int)\) → [Menu](/documentation/reference/objects//menu)
+\(n [int](/documentation/reference/gotypes/#int)\) → [Menu](/documentation/reference/objects//menu)
 {.funcsig}
-Limit limits the returned menu to n entries.
 
+
+Limit limits the returned menu to `n` entries.
 
 
 
@@ -74,8 +77,9 @@ Limit limits the returned menu to n entries.
 
 \(\) → [Menu](/documentation/reference/objects//menu)
 {.funcsig}
-Reverse reverses the order of the menu entries.
 
+
+Reverse reverses the order of the menu entries.
 
 
 
@@ -87,8 +91,9 @@ Reverse reverses the order of the menu entries.
 
 \(\) → [Menu](/documentation/reference/objects//menu)
 {.funcsig}
-Sort sorts the menu by weight, name and then by identifier.
 
+
+Sort sorts the menu by weight, name and then by identifier.
 
 
 
@@ -231,8 +236,9 @@ Params
 
 \(\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
-HasChildren returns whether this menu item has any children.
 
+
+HasChildren returns whether this menu item has any children.
 
 
 
@@ -242,10 +248,11 @@ HasChildren returns whether this menu item has any children.
 
 ## IsEqual {#navigation_menuentry_isequal}
 
-\([*MenuEntry](/documentation/reference/objects//*menuentry)\) → [bool](/documentation/reference/gotypes/#bool)
+\(inme [MenuEntry](/documentation/reference/objects//menuentry)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
-IsEqual returns whether the two menu entries represents the same menu entry.
 
+
+IsEqual returns whether the two menu entries represents the same menu entry.
 
 
 
@@ -255,11 +262,12 @@ IsEqual returns whether the two menu entries represents the same menu entry.
 
 ## IsSameResource {#navigation_menuentry_issameresource}
 
-\([*MenuEntry](/documentation/reference/objects//*menuentry)\) → [bool](/documentation/reference/gotypes/#bool)
+\(inme [MenuEntry](/documentation/reference/objects//menuentry)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
+
+
 IsSameResource returns whether the two menu entries points to the same
 resource (URL).
-
 
 
 
@@ -271,8 +279,9 @@ resource (URL).
 
 \(\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-KeyName returns the key used to identify this menu entry.
 
+
+KeyName returns the key used to identify this menu entry.
 
 
 
@@ -293,10 +302,14 @@ KeyName returns the key used to identify this menu entry.
 
 
 
+
+
 ## URL {#navigation_menuentry_url}
 
 \(\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
+
+
 
 
 

@@ -22,7 +22,7 @@ hugoSymbol: TODO
 
 
 ## MainType {#media_type_maintype}
-`MainType` is a [string](/documentation/reference/gotypes/#string).
+`MainType` is a {string  }.
 
 
 
@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 
 ## SubType {#media_type_subtype}
-`SubType` is a [string](/documentation/reference/gotypes/#string).
+`SubType` is a {string  }.
 
 
 
@@ -38,7 +38,7 @@ hugoSymbol: TODO
 
 
 ## Delimiter {#media_type_delimiter}
-`Delimiter` is a [string](/documentation/reference/gotypes/#string).
+`Delimiter` is a {string  }.
 
 
 
@@ -46,7 +46,7 @@ hugoSymbol: TODO
 
 
 ## FirstSuffix {#media_type_firstsuffix}
-`FirstSuffix` is a [SuffixInfo](/documentation/reference/objects//suffixinfo).
+`FirstSuffix` is a {SuffixInfo  }.
 FirstSuffix holds the first suffix defined for this Type.
 
 
@@ -64,6 +64,8 @@ FirstSuffix holds the first suffix defined for this Type.
 
 \(\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
+
+
 IsText returns whether this Type is a text format.
 Note that this may currently return false negatives.
 TODO(bep) improve
@@ -80,13 +82,13 @@ TODO(bep) improve
 
 
 
-
 ## Suffixes {#media_type_suffixes}
 
-\(\) → [[]string](/documentation/reference/objects//[]string)
+\(\) → [[]string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Suffixes returns all valid file suffixes for this type.
 
+
+Suffixes returns all valid file suffixes for this type.
 
 
 
@@ -98,12 +100,13 @@ Suffixes returns all valid file suffixes for this type.
 
 \(\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
+
+
 Type returns a string representing the main- and sub-type of a media type, e.g. "text/css".
 A suffix identifier will be appended after a "+" if set, e.g. "image/svg+xml".
 Hugo will register a set of default media types.
 These can be overridden by the user in the configuration,
 by defining a media type with the same Type.
-
 
 
 

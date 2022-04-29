@@ -30,12 +30,13 @@ hugoSymbol: TODO
 
 ## templates.Exists {#templates_namespace_exists}
 
-\([string](/documentation/reference/gotypes/#string)\) → [bool](/documentation/reference/gotypes/#bool)
+\(name [string](/documentation/reference/gotypes/#string)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
-Exists returns whether the template with the given name exists.
+
+
+Exists returns whether the template with the given `name` exists.
 Note that this is the Unix-styled relative path including filename suffix,
 e.g. partials/header.html
-
 
 {{< docs/func-aliases "templates.Exists" >}}
 {{< docs/func-examples "templates.Exists" >}}

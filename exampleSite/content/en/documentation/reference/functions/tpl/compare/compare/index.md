@@ -30,11 +30,12 @@ hugoSymbol: TODO
 
 ## compare.Conditional {#compare_namespace_conditional}
 
-\([bool](/documentation/reference/gotypes/#bool),[any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(condition [bool](/documentation/reference/gotypes/#bool), a [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-Conditional can be used as a ternary operator.
-It returns a if condition, else b.
 
+
+Conditional can be used as `a` ternary operator.
+It returns `a` if `condition`, else b.
 
 {{< docs/func-aliases "compare.Conditional" >}}
 {{< docs/func-examples "compare.Conditional" >}}
@@ -47,13 +48,14 @@ It returns a if condition, else b.
 
 ## compare.Default {#compare_namespace_default}
 
-\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
+\(dflt [any](/documentation/reference/gotypes/#any), given [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-Default checks whether a given value is set and returns a default value if it
+
+
+Default checks whether a `given` value is set and returns a default value if it
 is not.  "Set" in this context means non-zero for numeric types and times;
 non-zero length for strings, arrays, slices, and maps;
 any boolean or struct value; or non-nil for any other types.
-
 
 {{< docs/func-aliases "compare.Default" >}}
 {{< docs/func-examples "compare.Default" >}}
@@ -66,10 +68,11 @@ any boolean or struct value; or non-nil for any other types.
 
 ## compare.Eq {#compare_namespace_eq}
 
-\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(first [any](/documentation/reference/gotypes/#any), others [...any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
-Eq returns the boolean truth of arg1 == arg2 || arg1 == arg3 || arg1 == arg4.
 
+
+Eq returns the boolean truth of arg1 == arg2 || arg1 == arg3 || arg1 == arg4.
 
 {{< docs/func-aliases "compare.Eq" >}}
 {{< docs/func-examples "compare.Eq" >}}
@@ -82,10 +85,11 @@ Eq returns the boolean truth of arg1 == arg2 || arg1 == arg3 || arg1 == arg4.
 
 ## compare.Ge {#compare_namespace_ge}
 
-\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(first [any](/documentation/reference/gotypes/#any), others [...any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
-Ge returns the boolean truth of arg1 >= arg2 && arg1 >= arg3 && arg1 >= arg4.
 
+
+Ge returns the boolean truth of arg1 >= arg2 && arg1 >= arg3 && arg1 >= arg4.
 
 {{< docs/func-aliases "compare.Ge" >}}
 {{< docs/func-examples "compare.Ge" >}}
@@ -98,10 +102,11 @@ Ge returns the boolean truth of arg1 >= arg2 && arg1 >= arg3 && arg1 >= arg4.
 
 ## compare.Gt {#compare_namespace_gt}
 
-\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(first [any](/documentation/reference/gotypes/#any), others [...any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
-Gt returns the boolean truth of arg1 > arg2 && arg1 > arg3 && arg1 > arg4.
 
+
+Gt returns the boolean truth of arg1 > arg2 && arg1 > arg3 && arg1 > arg4.
 
 {{< docs/func-aliases "compare.Gt" >}}
 {{< docs/func-examples "compare.Gt" >}}
@@ -114,10 +119,11 @@ Gt returns the boolean truth of arg1 > arg2 && arg1 > arg3 && arg1 > arg4.
 
 ## compare.Le {#compare_namespace_le}
 
-\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(first [any](/documentation/reference/gotypes/#any), others [...any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
-Le returns the boolean truth of arg1 <= arg2 && arg1 <= arg3 && arg1 <= arg4.
 
+
+Le returns the boolean truth of arg1 <= arg2 && arg1 <= arg3 && arg1 <= arg4.
 
 {{< docs/func-aliases "compare.Le" >}}
 {{< docs/func-examples "compare.Le" >}}
@@ -130,10 +136,11 @@ Le returns the boolean truth of arg1 <= arg2 && arg1 <= arg3 && arg1 <= arg4.
 
 ## compare.Lt {#compare_namespace_lt}
 
-\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(first [any](/documentation/reference/gotypes/#any), others [...any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
-Lt returns the boolean truth of arg1 < arg2 && arg1 < arg3 && arg1 < arg4.
 
+
+Lt returns the boolean truth of arg1 < arg2 && arg1 < arg3 && arg1 < arg4.
 
 {{< docs/func-aliases "compare.Lt" >}}
 {{< docs/func-examples "compare.Lt" >}}
@@ -148,10 +155,11 @@ Lt returns the boolean truth of arg1 < arg2 && arg1 < arg3 && arg1 < arg4.
 
 ## compare.Ne {#compare_namespace_ne}
 
-\([any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(first [any](/documentation/reference/gotypes/#any), others [...any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
 {.funcsig}
-Ne returns the boolean truth of arg1 != arg2 && arg1 != arg3 && arg1 != arg4.
 
+
+Ne returns the boolean truth of arg1 != arg2 && arg1 != arg3 && arg1 != arg4.
 
 {{< docs/func-aliases "compare.Ne" >}}
 {{< docs/func-examples "compare.Ne" >}}

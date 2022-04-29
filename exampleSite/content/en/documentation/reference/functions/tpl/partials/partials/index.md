@@ -30,14 +30,15 @@ hugoSymbol: TODO
 
 ## partials.Include {#partials_namespace_include}
 
-\(,[string](/documentation/reference/gotypes/#string),[...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
+\(name [string](/documentation/reference/gotypes/#string), contextList [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
+
+
 Include executes the named partial.
 If the partial contains a return statement, that value will be returned.
 Else, the rendered output will be returned:
 A string if the partial is a text/template, or template.HTML when html/template.
 Note that ctx is provided by Hugo, not the end user.
-
 
 {{< docs/func-aliases "partials.Include" >}}
 {{< docs/func-examples "partials.Include" >}}
@@ -50,11 +51,12 @@ Note that ctx is provided by Hugo, not the end user.
 
 ## partials.IncludeCached {#partials_namespace_includecached}
 
-\(,[string](/documentation/reference/gotypes/#string),[any](/documentation/reference/gotypes/#any),[...any](/documentation/reference/objects//...any)\) → [any](/documentation/reference/gotypes/#any)
+\(name [string](/documentation/reference/gotypes/#string), context [any](/documentation/reference/gotypes/#any), variants [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
 {.funcsig}
-IncludeCached executes and caches partial templates.  The cache is created with name+variants as the key.
-Note that ctx is provided by Hugo, not the end user.
 
+
+IncludeCached executes and caches partial templates.  The cache is created with `name`+`variants` as the key.
+Note that ctx is provided by Hugo, not the end user.
 
 {{< docs/func-aliases "partials.IncludeCached" >}}
 {{< docs/func-examples "partials.IncludeCached" >}}

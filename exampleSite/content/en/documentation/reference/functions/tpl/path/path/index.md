@@ -30,15 +30,16 @@ hugoSymbol: TODO
 
 ## path.Base {#path_namespace_base}
 
-\([any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(path [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Base returns the last element of path.
-Trailing slashes are removed before extracting the last element.
-If the path is empty, Base returns ".".
-If the path consists entirely of slashes, Base returns "/".
-The input path is passed into filepath.ToSlash converting any Windows slashes
-to forward slashes.
 
+
+Base returns the last element of `path`.
+Trailing slashes are removed before extracting the last element.
+If the `path` is empty, Base returns ".".
+If the `path` consists entirely of slashes, Base returns "/".
+The input `path` is passed into filepath.ToSlash converting any Windows slashes
+to forward slashes.
 
 {{< docs/func-aliases "path.Base" >}}
 {{< docs/func-examples "path.Base" >}}
@@ -51,11 +52,12 @@ to forward slashes.
 
 ## path.Clean {#path_namespace_clean}
 
-\([any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(path [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
+
+
 Clean replaces the separators used with standard slashes and then
 extraneous slashes are removed.
-
 
 {{< docs/func-aliases "path.Clean" >}}
 {{< docs/func-examples "path.Clean" >}}
@@ -68,18 +70,19 @@ extraneous slashes are removed.
 
 ## path.Dir {#path_namespace_dir}
 
-\([any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(path [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Dir returns all but the last element of path, typically the path's directory.
-After dropping the final element using Split, the path is Cleaned and trailing
-slashes are removed.
-If the path is empty, Dir returns ".".
-If the path consists entirely of slashes followed by non-slash bytes, Dir
-returns a single slash. In any other case, the returned path does not end in a
-slash.
-The input path is passed into filepath.ToSlash converting any Windows slashes
-to forward slashes.
 
+
+Dir returns all but the last element of `path`, typically the `path`'s directory.
+After dropping the final element using Split, the `path` is Cleaned and trailing
+slashes are removed.
+If the `path` is empty, Dir returns ".".
+If the `path` consists entirely of slashes followed by non-slash bytes, Dir
+returns a single slash. In any other case, the returned `path` does not end in a
+slash.
+The input `path` is passed into filepath.ToSlash converting any Windows slashes
+to forward slashes.
 
 {{< docs/func-aliases "path.Dir" >}}
 {{< docs/func-examples "path.Dir" >}}
@@ -92,15 +95,16 @@ to forward slashes.
 
 ## path.Ext {#path_namespace_ext}
 
-\([any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(path [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Ext returns the file name extension used by path.
-The extension is the suffix beginning at the final dot
-in the final slash-separated element of path;
-it is empty if there is no dot.
-The input path is passed into filepath.ToSlash converting any Windows slashes
-to forward slashes.
 
+
+Ext returns the file name extension used by `path`.
+The extension is the suffix beginning at the final dot
+in the final slash-separated element of `path`;
+it is empty if there is no dot.
+The input `path` is passed into filepath.ToSlash converting any Windows slashes
+to forward slashes.
 
 {{< docs/func-aliases "path.Ext" >}}
 {{< docs/func-examples "path.Ext" >}}
@@ -113,15 +117,16 @@ to forward slashes.
 
 ## path.Join {#path_namespace_join}
 
-\([...any](/documentation/reference/objects//...any)\) → [string](/documentation/reference/gotypes/#string)
+\(elements [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Join joins any number of path elements into a single path, adding a
+
+
+Join joins any number of path `elements` into a single path, adding a
 separating slash if necessary. All the input
-path elements are passed into filepath.ToSlash converting any Windows slashes
+path `elements` are passed into filepath.ToSlash converting any Windows slashes
 to forward slashes.
 The result is Cleaned; in particular,
 all empty strings are ignored.
-
 
 {{< docs/func-aliases "path.Join" >}}
 {{< docs/func-examples "path.Join" >}}
@@ -134,16 +139,17 @@ all empty strings are ignored.
 
 ## path.Split {#path_namespace_split}
 
-\([any](/documentation/reference/gotypes/#any)\) → [DirFile](/documentation/reference/objects//dirfile)
+\(path [any](/documentation/reference/gotypes/#any)\) → [DirFile](/documentation/reference/objects//dirfile)
 {.funcsig}
-Split splits path immediately following the final slash,
-separating it into a directory and file name component.
-If there is no slash in path, Split returns an empty dir and
-file set to path.
-The input path is passed into filepath.ToSlash converting any Windows slashes
-to forward slashes.
-The returned values have the property that path = dir+file.
 
+
+Split splits `path` immediately following the final slash,
+separating it into a directory and file name component.
+If there is no slash in `path`, Split returns an empty dir and
+file set to `path`.
+The input `path` is passed into filepath.ToSlash converting any Windows slashes
+to forward slashes.
+The returned values have the property that `path` = dir+file.
 
 {{< docs/func-aliases "path.Split" >}}
 {{< docs/func-examples "path.Split" >}}

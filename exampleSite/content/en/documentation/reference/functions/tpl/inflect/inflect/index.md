@@ -30,23 +30,18 @@ hugoSymbol: TODO
 
 ## inflect.Humanize {#inflect_namespace_humanize}
 
-\([any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(in [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
+
+
 Humanize returns the humanized form of a single parameter.
 
 If the parameter is either an integer or a string containing an integer
 value, the behavior is to add the appropriate ordinal.
 
-
-```go-html-template
-Example:  "my-first-post" -> "My first post"
-
-Example:  "103" -> "103rd"
-
-Example:  52 -> "52nd"
-
-
-```
+    Example:  "my-first-post" -> "My first post"
+    Example:  "103" -> "103rd"
+    Example:  52 -> "52nd"
 
 {{< docs/func-aliases "inflect.Humanize" >}}
 {{< docs/func-examples "inflect.Humanize" >}}
@@ -59,10 +54,11 @@ Example:  52 -> "52nd"
 
 ## inflect.Pluralize {#inflect_namespace_pluralize}
 
-\([any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(in [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Pluralize returns the plural form of a single word.
 
+
+Pluralize returns the plural form of a single word.
 
 {{< docs/func-aliases "inflect.Pluralize" >}}
 {{< docs/func-examples "inflect.Pluralize" >}}
@@ -75,10 +71,11 @@ Pluralize returns the plural form of a single word.
 
 ## inflect.Singularize {#inflect_namespace_singularize}
 
-\([any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(in [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Singularize returns the singular form of a single word.
 
+
+Singularize returns the singular form of a single word.
 
 {{< docs/func-aliases "inflect.Singularize" >}}
 {{< docs/func-examples "inflect.Singularize" >}}

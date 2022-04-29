@@ -59,10 +59,11 @@ It can be any string, but it will be all lower case.
 
 ## Deps {#hugo_info_deps}
 
-\(\) → [[]*Dependency](/documentation/reference/objects//[]*dependency)
+\(\) → [*Dependency](/documentation/reference/objects//*dependency)
 {.funcsig}
-Deps gets a list of dependencies for this Hugo build.
 
+
+Deps gets a list of dependencies for this Hugo build.
 
 
 
@@ -72,10 +73,11 @@ Deps gets a list of dependencies for this Hugo build.
 
 ## Generator {#hugo_info_generator}
 
-\(\) → [HTML](/documentation/reference/objects/html/template/html)
+\(\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
 {.funcsig}
-Generator a Hugo meta generator HTML tag.
 
+
+Generator a Hugo meta generator HTML tag.
 
 
 
@@ -94,6 +96,8 @@ Generator a Hugo meta generator HTML tag.
 
 
 
+
+
 ## IsProduction {#hugo_info_isproduction}
 
 \(\) → [bool](/documentation/reference/gotypes/#bool)
@@ -105,12 +109,15 @@ Generator a Hugo meta generator HTML tag.
 
 
 
+
+
 ## Version {#hugo_info_version}
 
 \(\) → [VersionString](/documentation/reference/objects//versionstring)
 {.funcsig}
-Version returns the current version as a comparable version string.
 
+
+Version returns the current version as a comparable version string.
 
 
 

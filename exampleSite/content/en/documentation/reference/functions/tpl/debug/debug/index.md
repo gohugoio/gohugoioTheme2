@@ -30,15 +30,16 @@ hugoSymbol: TODO
 
 ## debug.Dump {#debug_namespace_dump}
 
-\([any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(val [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
 {.funcsig}
-Dump returns a object dump of val as a string.
+
+
+Dump returns a object dump of `val` as a string.
 Note that not every value passed to Dump will print so nicely, but
 we'll improve on that. We recommend using the "go" Chroma lexer to format the output
 nicely.
 Also note that the output from Dump may change from Hugo version to the next,
 so don't depend on a specific output.
-
 
 {{< docs/func-aliases "debug.Dump" >}}
 {{< docs/func-examples "debug.Dump" >}}

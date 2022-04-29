@@ -13,6 +13,9 @@ github.com/gohugoio/hugoDocs v0.81.1-0.20220302165412-259c65c8d5b8/go.mod h1:Mdx
 github.com/gohugoio/hugoDocs v0.98.0 h1:SFNQSzNl4bDjL0zzzJlVRqaD2JuBYM3g9AbG+Dj1IP0=
 github.com/gohugoio/hugoDocs v0.98.0/go.mod h1:0onYkT4Fe1qF5OxwKdyKkb8KMj0EPi/PENTy4CSpOQI=
 github.com/hotwired/turbo v7.0.1+incompatible/go.mod h1:6XcpYEC+j8xb7URpSYwhlq4iq98M5F5T/jaLWNHVbZs=
+github.com/hotwired/turbo v7.1.0+incompatible h1:+a6SIF+fcVR59cOpMneuReqiGjfTI66BuMg9HHa5dHQ=
+github.com/hotwired/turbo v7.1.0+incompatible/go.mod h1:6XcpYEC+j8xb7URpSYwhlq4iq98M5F5T/jaLWNHVbZs=
+github.com/instantpage/instant.page v5.1.0+incompatible h1:/Z2XRXfY5HwuCN3TTqo56PaFyIlDr4l3tyytR/jGHXI=
 github.com/instantpage/instant.page v5.1.0+incompatible/go.mod h1:GXVDktwI+K4T9o5mcK2NYDqPFxAUrB9U9goR9oG1SaI=
 github.com/ryangjchandler/spruce v2.6.4+incompatible/go.mod h1:pERscuhekU9NhSgrY8l7/0nLN1rBGBVnpvkMrVwGAZU=
 github.com/turbolinks/turbolinks-source-gem v5.2.0+incompatible/go.mod h1:Cl0Br9tUXkQvxumVNGTvyaa7dqpFC2kPMrsS0Ttc94U=

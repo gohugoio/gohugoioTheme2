@@ -34,11 +34,12 @@ tags:
 
 ## images.Config {#images_namespace_config}
 
-\([any](/documentation/reference/gotypes/#any)\) → [Config](/documentation/reference/objects/image/config)
+\(path [any](/documentation/reference/gotypes/#any)\) → [Config](/documentation/reference/objects/image/config)
 {.funcsig}
-Config returns the image.Config for the specified path relative to the
-working directory.
 
+
+Config returns the image.Config for the specified `path` relative to the
+working directory.
 
 {{< docs/func-aliases "images.Config" >}}
 {{< docs/func-examples "images.Config" >}}
@@ -51,8 +52,10 @@ working directory.
 
 ## images.Filter {#images_namespace_filter}
 
-\([...any](/documentation/reference/objects//...any)\) → [ImageResource](/documentation/reference/objects/resources/images/imageresource)
+\(args [...any](/documentation/reference/gotypes/#any)\) → [ImageResource](/documentation/reference/objects/resources/images/imageresource)
 {.funcsig}
+
+
 
 {{< docs/func-aliases "images.Filter" >}}
 {{< docs/func-examples "images.Filter" >}}
