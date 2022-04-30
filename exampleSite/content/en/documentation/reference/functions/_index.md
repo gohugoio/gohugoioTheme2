@@ -1,5 +1,5 @@
 ---
 title: "Function Namespaces"
 linkTitle: "Functions"
-weight: 10
+weight: 20
 ---

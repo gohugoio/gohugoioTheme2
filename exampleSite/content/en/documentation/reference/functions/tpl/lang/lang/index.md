@@ -7,7 +7,7 @@
 title: "lang"
 linkTitle: "lang"
 description: "Lang is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,11 +30,11 @@ hugoSymbol: TODO
 
 ## lang.FormatAccounting {#lang_namespace_formataccounting}
 
-\(precision [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(precision, currency, number [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-FormatAccounting returns the currency representation of number for the given currency and `precision`
+FormatAccounting returns the `currency` representation of `number` for the given `currency` and `precision`
 for the current language in accounting notation.
 
 The return value is formatted with at least two decimal places.
@@ -50,11 +50,11 @@ The return value is formatted with at least two decimal places.
 
 ## lang.FormatCurrency {#lang_namespace_formatcurrency}
 
-\(precision [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(precision, currency, number [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-FormatCurrency returns the currency representation of number for the given currency and `precision`
+FormatCurrency returns the `currency` representation of `number` for the given `currency` and `precision`
 for the current language.
 
 The return value is formatted with at least two decimal places.
@@ -70,11 +70,11 @@ The return value is formatted with at least two decimal places.
 
 ## lang.FormatNumber {#lang_namespace_formatnumber}
 
-\(precision [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(precision, number [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-FormatNumber formats number with the given `precision` for the current language.
+FormatNumber formats `number` with the given `precision` for the current language.
 
 {{< docs/func-aliases "lang.FormatNumber" >}}
 {{< docs/func-examples "lang.FormatNumber" >}}
@@ -87,11 +87,11 @@ FormatNumber formats number with the given `precision` for the current language.
 
 ## lang.FormatNumberCustom {#lang_namespace_formatnumbercustom}
 
-\(precision [any](/documentation/reference/gotypes/#any), options [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(precision, number [any](/documentation/reference/typesgo/#any), options [...any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-FormatNumberCustom formats a number with the given `precision` using the
+FormatNumberCustom formats a `number` with the given `precision` using the
 negative, decimal, and grouping `options`.  The ``options``
 parameter is a string consisting of `<negative> <decimal> <grouping>`.  The
 default ``options`` value is `- . ,`.
@@ -112,12 +112,12 @@ For a simpler function that adapts to the current language, see FormatNumber.
 
 ## lang.FormatPercent {#lang_namespace_formatpercent}
 
-\(precision [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(precision, number [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-FormatPercent formats number with the given `precision` for the current language.
-Note that the number is assumed to be a percentage.
+FormatPercent formats `number` with the given `precision` for the current language.
+Note that the `number` is assumed to be a percentage.
 
 {{< docs/func-aliases "lang.FormatPercent" >}}
 {{< docs/func-examples "lang.FormatPercent" >}}
@@ -130,7 +130,7 @@ Note that the number is assumed to be a percentage.
 
 ## lang.Merge {#lang_namespace_merge}
 
-\(p2 [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(p2, p1 [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -149,7 +149,7 @@ Merge creates a union of pages from two languages.
 
 ## lang.Translate {#lang_namespace_translate}
 
-\(id [any](/documentation/reference/gotypes/#any), args [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(id [any](/documentation/reference/typesgo/#any), args [...any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 

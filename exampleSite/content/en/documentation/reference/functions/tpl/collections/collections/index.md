@@ -7,7 +7,7 @@
 title: "collections"
 linkTitle: "collections"
 description: "Collections is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## collections.After {#collections_namespace_after}
 
-\(index [any](/documentation/reference/gotypes/#any), seq [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(index [any](/documentation/reference/typesgo/#any), seq [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -47,7 +47,7 @@ After returns all the items after the first N in a rangeable list.
 
 ## collections.Append {#collections_namespace_append}
 
-\(args [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(args [...any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -69,7 +69,7 @@ the first slice will be appended to the second:
 
 ## collections.Apply {#collections_namespace_apply}
 
-\(seq [any](/documentation/reference/gotypes/#any), fname [string](/documentation/reference/gotypes/#string), args [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(seq [any](/documentation/reference/typesgo/#any), fname [string](/documentation/reference/typesgo/#string), args [...any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -86,7 +86,7 @@ Apply takes a map, array, or slice and returns a new slice with the function `fn
 
 ## collections.Complement {#collections_namespace_complement}
 
-\(seqs [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(seqs [...any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -108,12 +108,12 @@ The reasoning behind this rather clumsy API is so we can do this in the template
 
 ## collections.Delimit {#collections_namespace_delimit}
 
-\(seq [any](/documentation/reference/gotypes/#any), last [...any](/documentation/reference/gotypes/#any)\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
+\(seq, delimiter [any](/documentation/reference/typesgo/#any), last [...any](/documentation/reference/typesgo/#any)\) → [template.HTML](/documentation/reference/typesgo/#templatehtml)
 {.funcsig}
 
 
 Delimit takes a given sequence and returns a delimited HTML string.
-If `last` is passed to the function, it will be used as the final delimiter.
+If `last` is passed to the function, it will be used as the final `delimiter`.
 
 {{< docs/func-aliases "collections.Delimit" >}}
 {{< docs/func-examples "collections.Delimit" >}}
@@ -126,7 +126,7 @@ If `last` is passed to the function, it will be used as the final delimiter.
 
 ## collections.Dictionary {#collections_namespace_dictionary}
 
-\(values [...any](/documentation/reference/gotypes/#any)\) → [map[string]any](/documentation/reference/gotypes/#mapstringany)
+\(values [...any](/documentation/reference/typesgo/#any)\) → [map[string]any](/documentation/reference/typesgo/#mapstringany)
 {.funcsig}
 
 
@@ -146,7 +146,7 @@ The keys can be string slices, which will create the needed nested structure.
 
 ## collections.EchoParam {#collections_namespace_echoparam}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(a, key [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -164,7 +164,7 @@ empty string.
 
 ## collections.First {#collections_namespace_first}
 
-\(limit [any](/documentation/reference/gotypes/#any), seq [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(limit [any](/documentation/reference/typesgo/#any), seq [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -181,7 +181,7 @@ First returns the first N items in a rangeable list.
 
 ## collections.Group {#collections_namespace_group}
 
-\(key [any](/documentation/reference/gotypes/#any), items [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(key [any](/documentation/reference/typesgo/#any), items [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -199,7 +199,7 @@ This is currently only supported for Pages.
 
 ## collections.In {#collections_namespace_in}
 
-\(l [any](/documentation/reference/gotypes/#any), v [any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(l [any](/documentation/reference/typesgo/#any), v [any](/documentation/reference/typesgo/#any)\) → [bool](/documentation/reference/typesgo/#bool)
 {.funcsig}
 
 
@@ -216,7 +216,7 @@ In returns whether `v` is in the set `l`.  `l` may be an array or slice.
 
 ## collections.Index {#collections_namespace_index}
 
-\(item [any](/documentation/reference/gotypes/#any), args [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(item [any](/documentation/reference/typesgo/#any), args [...any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -241,12 +241,12 @@ TODO(moorereason): merge upstream changes.
 
 ## collections.Intersect {#collections_namespace_intersect}
 
-\(l1 [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(l1, l2 [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
-Intersect returns the common elements in the given sets, `l1` and l2.  `l1` and
-l2 must be of the same type and may be either arrays or slices.
+Intersect returns the common elements in the given sets, `l1` and `l2`.  `l1` and
+`l2` must be of the same type and may be either arrays or slices.
 
 {{< docs/func-aliases "collections.Intersect" >}}
 {{< docs/func-examples "collections.Intersect" >}}
@@ -259,7 +259,7 @@ l2 must be of the same type and may be either arrays or slices.
 
 ## collections.IsSet {#collections_namespace_isset}
 
-\(a [any](/documentation/reference/gotypes/#any), key [any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(a [any](/documentation/reference/typesgo/#any), key [any](/documentation/reference/typesgo/#any)\) → [bool](/documentation/reference/typesgo/#bool)
 {.funcsig}
 
 
@@ -277,7 +277,7 @@ defined.
 
 ## collections.KeyVals {#collections_namespace_keyvals}
 
-\(key [any](/documentation/reference/gotypes/#any), vals [...any](/documentation/reference/gotypes/#any)\) → [KeyValues](/documentation/reference/objects/common/types/keyvalues)
+\(key [any](/documentation/reference/typesgo/#any), vals [...any](/documentation/reference/typesgo/#any)\) → [KeyValues](/documentation/reference/objects/common/types/keyvalues)
 {.funcsig}
 
 
@@ -294,7 +294,7 @@ KeyVals creates a `key` and values wrapper.
 
 ## collections.Last {#collections_namespace_last}
 
-\(limit [any](/documentation/reference/gotypes/#any), seq [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(limit [any](/documentation/reference/typesgo/#any), seq [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -311,7 +311,7 @@ Last returns the last N items in a rangeable list.
 
 ## collections.Merge {#collections_namespace_merge}
 
-\(params [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(params [...any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -330,7 +330,7 @@ Currently only maps are supported. Key handling is case insensitive.
 
 ## collections.NewScratch {#collections_namespace_newscratch}
 
-\(\) → [maps.Scratch](/documentation/reference/objects//maps.scratch)
+\(\) → [Scratch](/documentation/reference/objects/common/maps/scratch)
 {.funcsig}
 
 
@@ -348,7 +348,7 @@ thread safe way.
 
 ## collections.Querify {#collections_namespace_querify}
 
-\(params [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(params [...any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -365,7 +365,7 @@ Querify encodes the given parameters in URL-encoded form ("bar=baz&foo=quux") so
 
 ## collections.Reverse {#collections_namespace_reverse}
 
-\(slice [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(slice [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -382,7 +382,7 @@ Reverse creates a copy of `slice` and reverses it.
 
 ## collections.Seq {#collections_namespace_seq}
 
-\(args [...any](/documentation/reference/gotypes/#any)\) → [[]int](/documentation/reference/gotypes/#int)
+\(args [...any](/documentation/reference/typesgo/#any)\) → [[]int](/documentation/reference/typesgo/#int)
 {.funcsig}
 
 
@@ -406,7 +406,7 @@ Examples:
 
 ## collections.Shuffle {#collections_namespace_shuffle}
 
-\(seq [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(seq [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -423,7 +423,7 @@ Shuffle returns the given rangeable list in a randomised order.
 
 ## collections.Slice {#collections_namespace_slice}
 
-\(args [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(args [...any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -440,7 +440,7 @@ Slice returns a slice of all passed arguments.
 
 ## collections.Sort {#collections_namespace_sort}
 
-\(seq [any](/documentation/reference/gotypes/#any), args [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(seq [any](/documentation/reference/typesgo/#any), args [...any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -457,11 +457,11 @@ Sort returns a sorted sequence.
 
 ## collections.SymDiff {#collections_namespace_symdiff}
 
-\(s2 [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(s2, s1 [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
-SymDiff returns the symmetric difference of s1 and `s2`.
+SymDiff returns the symmetric difference of `s1` and `s2`.
 Arguments must be either a slice or an array of comparable types.
 
 {{< docs/func-aliases "collections.SymDiff" >}}
@@ -475,14 +475,14 @@ Arguments must be either a slice or an array of comparable types.
 
 ## collections.Union {#collections_namespace_union}
 
-\(l1 [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(l1, l2 [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
-Union returns the union of the given sets, `l1` and l2. `l1` and
-l2 must be of the same type and may be either arrays or slices.
-If `l1` and l2 aren't of the same type then `l1` will be returned.
-If either `l1` or l2 is nil then the non-nil list will be returned.
+Union returns the union of the given sets, `l1` and `l2`. `l1` and
+`l2` must be of the same type and may be either arrays or slices.
+If `l1` and `l2` aren't of the same type then `l1` will be returned.
+If either `l1` or `l2` is nil then the non-nil list will be returned.
 
 {{< docs/func-aliases "collections.Union" >}}
 {{< docs/func-examples "collections.Union" >}}
@@ -495,7 +495,7 @@ If either `l1` or l2 is nil then the non-nil list will be returned.
 
 ## collections.Uniq {#collections_namespace_uniq}
 
-\(seq [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(seq [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -513,7 +513,7 @@ duplicate elements removed.
 
 ## collections.Where {#collections_namespace_where}
 
-\(seq [any](/documentation/reference/gotypes/#any), args [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(seq, key [any](/documentation/reference/typesgo/#any), args [...any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 

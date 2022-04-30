@@ -18,7 +18,7 @@ block = true
 title = true
 [goldmark.renderer]
 hardWraps = false
-unsafe = true
+unsafe = false
 xhtml = false
 
 [highlight]

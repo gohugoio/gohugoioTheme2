@@ -47,11 +47,16 @@ ghrepo = "https://github.com/gohugoio/hugoDocs/"
 [[cascade]]
 type = 'documentation'
 [cascade._target]
-path = '/categories/**'
+kind = '{taxonomy,term}'
 [[cascade]]
 type = 'documentation'
 [cascade._target]
-path = '/tags/**'
+kind = '{taxonomy,term}'
+[[cascade]]
+[cascade._build]
+list = 'never'
+[cascade._target]
+path = '/documentation/reference/types**'
 
 
 [minify]

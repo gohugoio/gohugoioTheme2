@@ -1,0 +1,12 @@
+{{/* TODO(bep) link to correct version. */}}
+{{ $module := .Get "module" }}
+{{ $package := .Get "package" }}
+{{ $type := .Get "type" }}
+{{- if $module }}
+  {{ $module = printf "%s/"  $module }}
+{{ end -}}
+{{ $url := printf "https://pkg.go.dev/%s%s#%s" $module $package $type }}
+See the GoDoc for
+<a href="{{ $url }}" class="text-blue-500 hover:text-blue-700" target="_blank"
+  >{{ $type }}</a
+>.

@@ -7,7 +7,7 @@
 title: "encoding"
 linkTitle: "encoding"
 description: "Encoding is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## encoding.Base64Decode {#encoding_namespace_base64decode}
 
-\(content [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(content [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -47,7 +47,7 @@ Base64Decode returns the base64 decoding of the given `content`.
 
 ## encoding.Base64Encode {#encoding_namespace_base64encode}
 
-\(content [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(content [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -64,7 +64,7 @@ Base64Encode returns the base64 encoding of the given `content`.
 
 ## encoding.Jsonify {#encoding_namespace_jsonify}
 
-\(args [...any](/documentation/reference/gotypes/#any)\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
+\(args [...any](/documentation/reference/typesgo/#any)\) → [template.HTML](/documentation/reference/typesgo/#templatehtml)
 {.funcsig}
 
 

@@ -7,7 +7,7 @@
 title: "data"
 linkTitle: "data"
 description: "Data is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## data.GetCSV {#data_namespace_getcsv}
 
-\(sep [string](/documentation/reference/gotypes/#string), args [...any](/documentation/reference/gotypes/#any)\) → [[]string](/documentation/reference/objects//[]string)
+\(sep [string](/documentation/reference/typesgo/#string), args [...any](/documentation/reference/typesgo/#any)\) → [[]string](/documentation/reference/objects//[]string)
 {.funcsig}
 
 
@@ -51,7 +51,7 @@ GetCSV returns nil or a slice slice to use in a short code.
 
 ## data.GetJSON {#data_namespace_getjson}
 
-\(args [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(args [...any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 

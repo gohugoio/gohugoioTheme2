@@ -7,7 +7,7 @@
 title: "os"
 linkTitle: "os"
 description: "Os is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## os.FileExists {#os_namespace_fileexists}
 
-\(i [any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(i [any](/documentation/reference/typesgo/#any)\) → [bool](/documentation/reference/typesgo/#bool)
 {.funcsig}
 
 
@@ -47,7 +47,7 @@ FileExists checks whether a file exists under the given path.
 
 ## os.Getenv {#os_namespace_getenv}
 
-\(key [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(key [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -65,7 +65,7 @@ It returns the value, which will be empty if the variable is not present.
 
 ## os.ReadDir {#os_namespace_readdir}
 
-\(i [any](/documentation/reference/gotypes/#any)\) → [_os.FileInfo](/documentation/reference/objects//_os.fileinfo)
+\(i [any](/documentation/reference/typesgo/#any)\) → [_os.FileInfo](/documentation/reference/objects//_os.fileinfo)
 {.funcsig}
 
 
@@ -82,7 +82,7 @@ ReadDir lists the directory contents relative to the configured WorkingDir.
 
 ## os.ReadFile {#os_namespace_readfile}
 
-\(i [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(i [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -101,7 +101,7 @@ There is an upper size limit set at 1 megabytes.
 
 ## os.Stat {#os_namespace_stat}
 
-\(i [any](/documentation/reference/gotypes/#any)\) → [FileInfo](/documentation/reference/objects/os/fileinfo)
+\(i [any](/documentation/reference/typesgo/#any)\) → [FileInfo](/documentation/reference/objects/os/fileinfo)
 {.funcsig}
 
 

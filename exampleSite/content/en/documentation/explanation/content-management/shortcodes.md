@@ -48,7 +48,7 @@ Here are two examples of paired shortcodes:
 
 The examples above use two different delimiters, the difference being the `%` character in the first and the `<>` characters in the second.
 
-### Shortcodes with raw string parameters
+### With raw string parameters
 
 {{< new-in "0.64.1" >}}
 
@@ -59,7 +59,7 @@ You can pass multiple lines as parameters to a shortcode by using raw string lit
 and a new line with a "quoted string".` */>}}
 ```
 
-### Shortcodes with Markdown
+### With Markdown
 
 In Hugo `0.55` we changed how the `%` delimiter works. Shortcodes using the `%` as the outer-most delimiter will now be fully rendered when sent to the content renderer (e.g. Blackfriday for Markdown), meaning they can be part of the generated table of contents, footnotes, etc.
 
@@ -70,7 +70,7 @@ If you want the old behavior, you can put the following line in the start of you
 ```
 
 
-### Shortcodes Without Markdown
+### Without Markdown
 
 The `<` character indicates that the shortcode's inner content does *not* need further rendering. Often shortcodes without markdown include internal HTML:
 
@@ -358,7 +358,7 @@ Using the preceding `vimeo` example, the following HTML will be added to your re
 {{< /output >}}
 
 {{% tip %}}
-If you want to further customize the visual styling of the YouTube or Vimeo output, add a `class` named parameter when calling the shortcode. The new `class` will be added to the `<div>` that wraps the `<iframe>` *and* will remove the inline styles. Note that you will need to call the `id` as a named parameter as well. You can also give the vimeo video a descriptive title with `title`. 
+If you want to further customize the visual styling of the YouTube or Vimeo output, add a `class` named parameter when calling the shortcode. The new `class` will be added to the `<div>` that wraps the `<iframe>` *and* will remove the inline styles. Note that you will need to call the `id` as a named parameter as well. You can also give the vimeo video a descriptive title with `title`.
 
 ```
 {{</* vimeo id="146022717" class="my-vimeo-wrapper-class" title="My vimeo video" */>}}

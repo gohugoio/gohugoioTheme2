@@ -7,7 +7,7 @@
 title: "strings"
 linkTitle: "strings"
 description: "Strings is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## strings.Chomp {#strings_namespace_chomp}
 
-\(s [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(s [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -47,11 +47,11 @@ Chomp returns a copy of `s` with all trailing newline characters removed.
 
 ## strings.Contains {#strings_namespace_contains}
 
-\(s [any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(s, substr [any](/documentation/reference/typesgo/#any)\) → [bool](/documentation/reference/typesgo/#bool)
 {.funcsig}
 
 
-Contains reports whether substr is in `s`.
+Contains reports whether `substr` is in `s`.
 
 {{< docs/func-aliases "strings.Contains" >}}
 {{< docs/func-examples "strings.Contains" >}}
@@ -64,11 +64,11 @@ Contains reports whether substr is in `s`.
 
 ## strings.ContainsAny {#strings_namespace_containsany}
 
-\(s [any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(s, chars [any](/documentation/reference/typesgo/#any)\) → [bool](/documentation/reference/typesgo/#bool)
 {.funcsig}
 
 
-ContainsAny reports whether any Unicode code points in chars are within `s`.
+ContainsAny reports whether any Unicode code points in `chars` are within `s`.
 
 {{< docs/func-aliases "strings.ContainsAny" >}}
 {{< docs/func-examples "strings.ContainsAny" >}}
@@ -81,12 +81,12 @@ ContainsAny reports whether any Unicode code points in chars are within `s`.
 
 ## strings.Count {#strings_namespace_count}
 
-\(substr [any](/documentation/reference/gotypes/#any)\) → [int](/documentation/reference/gotypes/#int)
+\(substr, s [any](/documentation/reference/typesgo/#any)\) → [int](/documentation/reference/typesgo/#int)
 {.funcsig}
 
 
-Count counts the number of non-overlapping instances of `substr` in s.
-If `substr` is an empty string, Count returns 1 + the number of Unicode code points in s.
+Count counts the number of non-overlapping instances of `substr` in `s`.
+If `substr` is an empty string, Count returns 1 + the number of Unicode code points in `s`.
 
 {{< docs/func-aliases "strings.Count" >}}
 {{< docs/func-examples "strings.Count" >}}
@@ -99,7 +99,7 @@ If `substr` is an empty string, Count returns 1 + the number of Unicode code poi
 
 ## strings.CountRunes {#strings_namespace_countrunes}
 
-\(s [any](/documentation/reference/gotypes/#any)\) → [int](/documentation/reference/gotypes/#int)
+\(s [any](/documentation/reference/typesgo/#any)\) → [int](/documentation/reference/typesgo/#int)
 {.funcsig}
 
 
@@ -116,7 +116,7 @@ CountRunes returns the number of runes in `s`, excluding whitespace.
 
 ## strings.CountWords {#strings_namespace_countwords}
 
-\(s [any](/documentation/reference/gotypes/#any)\) → [int](/documentation/reference/gotypes/#int)
+\(s [any](/documentation/reference/typesgo/#any)\) → [int](/documentation/reference/typesgo/#int)
 {.funcsig}
 
 
@@ -133,7 +133,7 @@ CountWords returns the approximate word count in `s`.
 
 ## strings.FindRE {#strings_namespace_findre}
 
-\(expr [string](/documentation/reference/gotypes/#string), content [any](/documentation/reference/gotypes/#any), limit [...any](/documentation/reference/gotypes/#any)\) → [[]string](/documentation/reference/gotypes/#string)
+\(expr [string](/documentation/reference/typesgo/#string), content [any](/documentation/reference/typesgo/#any), limit [...any](/documentation/reference/typesgo/#any)\) → [[]string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -151,11 +151,11 @@ will be included. The number of matches can be limited with an optional third pa
 
 ## strings.FirstUpper {#strings_namespace_firstupper}
 
-\(s [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(s [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-FirstUpper returns a string with the first character as upper case.
+FirstUpper converts `s` making  the first character upper case.
 
 {{< docs/func-aliases "strings.FirstUpper" >}}
 {{< docs/func-examples "strings.FirstUpper" >}}
@@ -168,11 +168,11 @@ FirstUpper returns a string with the first character as upper case.
 
 ## strings.HasPrefix {#strings_namespace_hasprefix}
 
-\(s [any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(s, prefix [any](/documentation/reference/typesgo/#any)\) → [bool](/documentation/reference/typesgo/#bool)
 {.funcsig}
 
 
-HasPrefix tests whether the input `s` begins with prefix.
+HasPrefix tests whether the input `s` begins with `prefix`.
 
 {{< docs/func-aliases "strings.HasPrefix" >}}
 {{< docs/func-examples "strings.HasPrefix" >}}
@@ -185,11 +185,11 @@ HasPrefix tests whether the input `s` begins with prefix.
 
 ## strings.HasSuffix {#strings_namespace_hassuffix}
 
-\(s [any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(s, suffix [any](/documentation/reference/typesgo/#any)\) → [bool](/documentation/reference/typesgo/#bool)
 {.funcsig}
 
 
-HasSuffix tests whether the input `s` begins with suffix.
+HasSuffix tests whether the input `s` begins with `suffix`.
 
 {{< docs/func-aliases "strings.HasSuffix" >}}
 {{< docs/func-examples "strings.HasSuffix" >}}
@@ -202,11 +202,11 @@ HasSuffix tests whether the input `s` begins with suffix.
 
 ## strings.Repeat {#strings_namespace_repeat}
 
-\(n [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(n, s [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-Repeat returns a new string consisting of count copies of the string s.
+Repeat returns a new string consisting of `n` copies of the string `s`.
 
 {{< docs/func-aliases "strings.Repeat" >}}
 {{< docs/func-examples "strings.Repeat" >}}
@@ -219,12 +219,12 @@ Repeat returns a new string consisting of count copies of the string s.
 
 ## strings.Replace {#strings_namespace_replace}
 
-\(s [any](/documentation/reference/gotypes/#any), limit [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(s, old, new [any](/documentation/reference/typesgo/#any), limit [...any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-Replace returns a copy of the string `s` with all occurrences of old replaced
-with new.  The number of replacements can be limited with an optional fourth
+Replace returns a copy of the string `s` with all occurrences of `old` replaced
+with `new`.  The number of replacements can be limited with an optional fourth
 parameter.
 
 {{< docs/func-aliases "strings.Replace" >}}
@@ -238,12 +238,12 @@ parameter.
 
 ## strings.ReplaceRE {#strings_namespace_replacere}
 
-\(pattern [any](/documentation/reference/gotypes/#any), n [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(pattern, repl, s [any](/documentation/reference/typesgo/#any), n [...any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-ReplaceRE returns a copy of s, replacing all matches of the regular
-expression `pattern` with the replacement text repl. The number of replacements
+ReplaceRE returns a copy of `s`, replacing all matches of the regular
+expression `pattern` with the replacement text `repl`. The number of replacements
 can be limited with an optional fourth parameter.
 
 {{< docs/func-aliases "strings.ReplaceRE" >}}
@@ -257,7 +257,7 @@ can be limited with an optional fourth parameter.
 
 ## strings.RuneCount {#strings_namespace_runecount}
 
-\(s [any](/documentation/reference/gotypes/#any)\) → [int](/documentation/reference/gotypes/#int)
+\(s [any](/documentation/reference/typesgo/#any)\) → [int](/documentation/reference/typesgo/#int)
 {.funcsig}
 
 
@@ -274,7 +274,7 @@ RuneCount returns the number of runes in `s`.
 
 ## strings.SliceString {#strings_namespace_slicestring}
 
-\(a [any](/documentation/reference/gotypes/#any), startEnd [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(a [any](/documentation/reference/typesgo/#any), startEnd [...any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -293,7 +293,7 @@ The end index can be omitted, it defaults to the string's length.
 
 ## strings.Split {#strings_namespace_split}
 
-\(a [any](/documentation/reference/gotypes/#any), delimiter [string](/documentation/reference/gotypes/#string)\) → [[]string](/documentation/reference/gotypes/#string)
+\(a [any](/documentation/reference/typesgo/#any), delimiter [string](/documentation/reference/typesgo/#string)\) → [[]string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -310,7 +310,7 @@ Split slices an input string into all substrings separated by `delimiter`.
 
 ## strings.Substr {#strings_namespace_substr}
 
-\(a [any](/documentation/reference/gotypes/#any), nums [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(a [any](/documentation/reference/typesgo/#any), nums [...any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -338,7 +338,7 @@ the end of string.
 
 ## strings.Title {#strings_namespace_title}
 
-\(s [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(s [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -356,7 +356,7 @@ mapped to their title case.
 
 ## strings.ToLower {#strings_namespace_tolower}
 
-\(s [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(s [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -374,7 +374,7 @@ lower case.
 
 ## strings.ToUpper {#strings_namespace_toupper}
 
-\(s [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(s [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -392,12 +392,12 @@ upper case.
 
 ## strings.Trim {#strings_namespace_trim}
 
-\(s [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(s, cutset [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-Trim returns a string with all leading and trailing characters defined
-contained in cutset removed.
+Trim returns converts the strings `s` removing all leading and trailing characters defined
+contained.
 
 {{< docs/func-aliases "strings.Trim" >}}
 {{< docs/func-examples "strings.Trim" >}}
@@ -410,11 +410,11 @@ contained in cutset removed.
 
 ## strings.TrimLeft {#strings_namespace_trimleft}
 
-\(cutset [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(cutset, s [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-TrimLeft returns a slice of the string s with all leading characters
+TrimLeft returns a slice of the string `s` with all leading characters
 contained in `cutset` removed.
 
 {{< docs/func-aliases "strings.TrimLeft" >}}
@@ -428,12 +428,12 @@ contained in `cutset` removed.
 
 ## strings.TrimPrefix {#strings_namespace_trimprefix}
 
-\(prefix [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(prefix, s [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-TrimPrefix returns s without the provided leading `prefix` string. If s doesn't
-start with `prefix`, s is returned unchanged.
+TrimPrefix returns `s` without the provided leading `prefix` string. If `s` doesn't
+start with `prefix`, `s` is returned unchanged.
 
 {{< docs/func-aliases "strings.TrimPrefix" >}}
 {{< docs/func-examples "strings.TrimPrefix" >}}
@@ -446,11 +446,11 @@ start with `prefix`, s is returned unchanged.
 
 ## strings.TrimRight {#strings_namespace_trimright}
 
-\(cutset [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(cutset, s [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-TrimRight returns a slice of the string s with all trailing characters
+TrimRight returns a slice of the string `s` with all trailing characters
 contained in `cutset` removed.
 
 {{< docs/func-aliases "strings.TrimRight" >}}
@@ -464,12 +464,12 @@ contained in `cutset` removed.
 
 ## strings.TrimSuffix {#strings_namespace_trimsuffix}
 
-\(suffix [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(suffix, s [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-TrimSuffix returns s without the provided trailing `suffix` string. If s
-doesn't end with `suffix`, s is returned unchanged.
+TrimSuffix returns `s` without the provided trailing `suffix` string. If `s`
+doesn't end with `suffix`, `s` is returned unchanged.
 
 {{< docs/func-aliases "strings.TrimSuffix" >}}
 {{< docs/func-examples "strings.TrimSuffix" >}}
@@ -482,7 +482,7 @@ doesn't end with `suffix`, s is returned unchanged.
 
 ## strings.Truncate {#strings_namespace_truncate}
 
-\(a [any](/documentation/reference/gotypes/#any), options [...any](/documentation/reference/gotypes/#any)\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
+\(a [any](/documentation/reference/typesgo/#any), options [...any](/documentation/reference/typesgo/#any)\) → [template.HTML](/documentation/reference/typesgo/#templatehtml)
 {.funcsig}
 
 

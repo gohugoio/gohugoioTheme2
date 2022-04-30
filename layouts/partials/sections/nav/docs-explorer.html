@@ -20,7 +20,6 @@
   {{ $pl := printf "pl-%d" $pleft }}
   {{ $plCurrent := printf "pl-%d" (sub $pleft 2 ) }}
   {{ $pages := ($p.Pages | union $p.Sections).ByWeight }}
-  {{ $pages = where $pages "Weight" "lt" 1000 }}
 
   {{ range $pages }}
     {{ $hasChildren := gt (len .Pages) 0 }}
@@ -30,7 +29,11 @@
         <a
           @click.prevent="toggleNode('{{ .RelPermalink }}')"
           :class="{ 'font-semibold border-l-2': isCurrent('{{ .RelPermalink }}') }"
-          class="block cursor-pointer {{ $pl }} {{ $class }} tracking-tight leading-7 hover:bg-gray-100">
+          class="block cursor-pointer {{ $pl }} {{ $class }} tracking-tight {{ if eq $level 1 }}
+            leading-7
+          {{ else }}
+            leading-6 text-sm
+          {{ end }} hover:bg-gray-100">
           <span :class="{ 'pl-2px': !isCurrent('{{ .RelPermalink }}') }"
             >{{ .LinkTitle }}</span
           >
@@ -40,7 +43,7 @@
         </ul>
       {{ else }}
         <a
-          class="block box-content cursor-pointer {{ $pl }} text-gray-700 hover:text-gray-600 tracking-tight leading-7 hover:bg-gray-100"
+          class="block box-content cursor-pointer {{ $pl }} text-sm text-gray-700 hover:text-gray-600 tracking-tight leading-6 hover:bg-gray-100 truncate"
           :class="{ 'font-semibold border-l-2': isCurrent('{{ .RelPermalink }}') }"
           href="{{ .RelPermalink }}"
           ><span :class="{ 'pl-2px': !isCurrent('{{ .RelPermalink }}') }"

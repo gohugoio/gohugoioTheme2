@@ -5,8 +5,10 @@
 title: "MediaType"
 linkTitle: "MediaType"
 description: "MediaType is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
 
+
+tags:
+- outputs
 
 
 
@@ -46,7 +48,7 @@ hugoSymbol: TODO
 
 
 ## FirstSuffix {#media_type_firstsuffix}
-`FirstSuffix` is a {SuffixInfo  }.
+`FirstSuffix` is a {SuffixInfo  media}.
 FirstSuffix holds the first suffix defined for this Type.
 
 
@@ -62,7 +64,7 @@ FirstSuffix holds the first suffix defined for this Type.
 
 ## IsText {#media_type_istext}
 
-\(\) → [bool](/documentation/reference/gotypes/#bool)
+\(\) → [bool](/documentation/reference/typesgo/#bool)
 {.funcsig}
 
 
@@ -84,7 +86,7 @@ TODO(bep) improve
 
 ## Suffixes {#media_type_suffixes}
 
-\(\) → [[]string](/documentation/reference/gotypes/#string)
+\(\) → [[]string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -98,7 +100,7 @@ Suffixes returns all valid file suffixes for this type.
 
 ## Type {#media_type_type}
 
-\(\) → [string](/documentation/reference/gotypes/#string)
+\(\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
