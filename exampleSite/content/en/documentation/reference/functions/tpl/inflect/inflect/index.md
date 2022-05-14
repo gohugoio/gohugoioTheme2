@@ -7,7 +7,7 @@
 title: "inflect"
 linkTitle: "inflect"
 description: "Inflect is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## inflect.Humanize {#inflect_namespace_humanize}
 
-\(in [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(in [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -54,7 +54,7 @@ value, the behavior is to add the appropriate ordinal.
 
 ## inflect.Pluralize {#inflect_namespace_pluralize}
 
-\(in [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(in [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -71,7 +71,7 @@ Pluralize returns the plural form of a single word.
 
 ## inflect.Singularize {#inflect_namespace_singularize}
 
-\(in [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(in [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 

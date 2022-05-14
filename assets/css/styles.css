@@ -15,6 +15,15 @@ body {
   fill: currentColor; /* Applies to SVG only */
 }
 
+/* Add some space when navigating to an anchor link */
+[id]::before {
+  content: '';
+  display: block;
+  height:      4rem;
+  margin-top: -4rem;
+  visibility: hidden;
+}
+
 .nested-blockquote blockquote {
   border-left: 4px solid var(--primary-color);
   padding-left: 1em;

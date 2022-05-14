@@ -7,7 +7,7 @@
 title: "path"
 linkTitle: "path"
 description: "Path is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## path.Base {#path_namespace_base}
 
-\(path [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(path [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -52,7 +52,7 @@ to forward slashes.
 
 ## path.Clean {#path_namespace_clean}
 
-\(path [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(path [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -70,7 +70,7 @@ extraneous slashes are removed.
 
 ## path.Dir {#path_namespace_dir}
 
-\(path [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(path [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -95,7 +95,7 @@ to forward slashes.
 
 ## path.Ext {#path_namespace_ext}
 
-\(path [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(path [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -117,7 +117,7 @@ to forward slashes.
 
 ## path.Join {#path_namespace_join}
 
-\(elements [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(elements [...any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -139,7 +139,7 @@ all empty strings are ignored.
 
 ## path.Split {#path_namespace_split}
 
-\(path [any](/documentation/reference/gotypes/#any)\) → [DirFile](/documentation/reference/objects//dirfile)
+\(path [any](/documentation/reference/typesgo/#any)\) → [DirFile](/documentation/reference/objects/tpl/path/dirfile)
 {.funcsig}
 
 

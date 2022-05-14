@@ -3,6 +3,7 @@
   <h1 class="text-2xl text-black font-semibold">
     {{ .Title | title }}
   </h1>
+  {{ partial "tags.html" . }}
   {{ if gt (len .Content) 20 }}
     <div class="mt-4 text-lg text-black">
       {{ .Content }}

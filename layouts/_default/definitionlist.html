@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+  <h1 class="text-2xl text-black font-semibold">
+    {{ .Title | title }}
+  </h1>
+  {{ partial "tags.html" . }}
+  {{ if gt (len .Content) 20 }}
+    <div class="mt-4 text-lg text-black">
+      {{ .Content }}
+    </div>
+  {{ end }}
+  {{ with .Pages }}
+    <dl class="mt-8">
+      {{ range . }}
+        {{ $anchor := .Slug | default .LinkTitle | anchorize }}
+        <dt>
+          <a class="underline" href="{{ .RelPermalink }}"
+            >{{ .Slug | default .LinkTitle }}</a
+          >
+          <a class="anchor" name="{{ $anchor }}"></a>
+          <a class="inline-flex items-center" href="#{{ $anchor }}">
+            <svg class="opacity-60 hover:text-steel-500 h-5 w-5">
+              <use href="#icon--clip"></use>
+            </svg>
+          </a>
+        </dt>
+        <dd>{{ .Description }}</dd>
+      {{ end }}
+    </dl>
+  {{ end }}
+{{ end }}

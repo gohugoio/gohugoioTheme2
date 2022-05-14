@@ -7,7 +7,7 @@
 title: "urls"
 linkTitle: "urls"
 description: "Urls is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,12 +30,12 @@ hugoSymbol: TODO
 
 ## urls.AbsLangURL {#urls_namespace_abslangurl}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
+\(s [any](/documentation/reference/typesgo/#any)\) → [template.HTML](/documentation/reference/typesgo/#templatehtml)
 {.funcsig}
 
 
-AbsLangURL takes `a` given string and converts it to an absolute URL according
-to `a` page's position in the project directory structure and the current
+AbsLangURL the string `s` and converts it to an absolute URL according
+to a page'`s` position in the project directory structure and the current
 language.
 
 {{< docs/func-aliases "urls.AbsLangURL" >}}
@@ -49,11 +49,11 @@ language.
 
 ## urls.AbsURL {#urls_namespace_absurl}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
+\(s [any](/documentation/reference/typesgo/#any)\) → [template.HTML](/documentation/reference/typesgo/#templatehtml)
 {.funcsig}
 
 
-AbsURL takes `a` given string and converts it to an absolute URL.
+AbsURL takes the string `s` and converts it to an absolute URL.
 
 {{< docs/func-aliases "urls.AbsURL" >}}
 {{< docs/func-examples "urls.AbsURL" >}}
@@ -66,11 +66,12 @@ AbsURL takes `a` given string and converts it to an absolute URL.
 
 ## urls.Anchorize {#urls_namespace_anchorize}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(s [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-Anchorize creates sanitized anchor names that are compatible with Blackfriday.
+Anchorize creates sanitized anchor name version of the string `s` that is compatible
+with how your configured markdown renderer does it.
 
 {{< docs/func-aliases "urls.Anchorize" >}}
 {{< docs/func-examples "urls.Anchorize" >}}
@@ -83,7 +84,7 @@ Anchorize creates sanitized anchor names that are compatible with Blackfriday.
 
 ## urls.Parse {#urls_namespace_parse}
 
-\(rawurl [any](/documentation/reference/gotypes/#any)\) → [url.URL](/documentation/reference/objects//url.url)
+\(rawurl [any](/documentation/reference/typesgo/#any)\) → [URL](/documentation/reference/objects/net/url/url)
 {.funcsig}
 
 
@@ -101,11 +102,11 @@ absolute.
 
 ## urls.Ref {#urls_namespace_ref}
 
-\(in [any](/documentation/reference/gotypes/#any), args [any](/documentation/reference/gotypes/#any)\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
+\(p [any](/documentation/reference/typesgo/#any), args [any](/documentation/reference/typesgo/#any)\) → [template.HTML](/documentation/reference/typesgo/#templatehtml)
 {.funcsig}
 
 
-Ref returns the absolute URL path to a given content item.
+Ref returns the absolute URL path to a given content item from Page `p`.
 
 {{< docs/func-aliases "urls.Ref" >}}
 {{< docs/func-examples "urls.Ref" >}}
@@ -118,12 +119,12 @@ Ref returns the absolute URL path to a given content item.
 
 ## urls.RelLangURL {#urls_namespace_rellangurl}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
+\(s [any](/documentation/reference/typesgo/#any)\) → [template.HTML](/documentation/reference/typesgo/#templatehtml)
 {.funcsig}
 
 
-RelLangURL takes `a` given string and prepends the relative path according to `a`
-page's position in the project directory structure and the current language.
+RelLangURL takes the string `s` and prepends the relative path according to a
+page'`s` position in the project directory structure and the current language.
 
 {{< docs/func-aliases "urls.RelLangURL" >}}
 {{< docs/func-examples "urls.RelLangURL" >}}
@@ -136,11 +137,11 @@ page's position in the project directory structure and the current language.
 
 ## urls.RelRef {#urls_namespace_relref}
 
-\(in [any](/documentation/reference/gotypes/#any), args [any](/documentation/reference/gotypes/#any)\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
+\(p [any](/documentation/reference/typesgo/#any), args [any](/documentation/reference/typesgo/#any)\) → [template.HTML](/documentation/reference/typesgo/#templatehtml)
 {.funcsig}
 
 
-RelRef returns the relative URL path to a given content item.
+RelRef returns the relative URL path to a given content item from Page `p`.
 
 {{< docs/func-aliases "urls.RelRef" >}}
 {{< docs/func-examples "urls.RelRef" >}}
@@ -153,12 +154,12 @@ RelRef returns the relative URL path to a given content item.
 
 ## urls.RelURL {#urls_namespace_relurl}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
+\(s [any](/documentation/reference/typesgo/#any)\) → [template.HTML](/documentation/reference/typesgo/#templatehtml)
 {.funcsig}
 
 
-RelURL takes `a` given string and prepends the relative path according to `a`
-page's position in the project directory structure.
+RelURL takes the string `s` and prepends the relative path according to a
+page'`s` position in the project directory structure.
 
 {{< docs/func-aliases "urls.RelURL" >}}
 {{< docs/func-examples "urls.RelURL" >}}
@@ -171,11 +172,11 @@ page's position in the project directory structure.
 
 ## urls.URLize {#urls_namespace_urlize}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(s [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-URLize returns the given argument formatted as URL.
+URLize returns the the strings `s` formatted as an URL.
 
 {{< docs/func-aliases "urls.URLize" >}}
 {{< docs/func-examples "urls.URLize" >}}

@@ -7,7 +7,7 @@
 title: "images"
 linkTitle: "images"
 description: "Images is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 tags:
 - images
@@ -34,7 +34,7 @@ tags:
 
 ## images.Config {#images_namespace_config}
 
-\(path [any](/documentation/reference/gotypes/#any)\) → [Config](/documentation/reference/objects/image/config)
+\(path [any](/documentation/reference/typesgo/#any)\) → [image.Config](/documentation/reference/typesgo/#imageconfig)
 {.funcsig}
 
 
@@ -52,7 +52,7 @@ working directory.
 
 ## images.Filter {#images_namespace_filter}
 
-\(args [...any](/documentation/reference/gotypes/#any)\) → [ImageResource](/documentation/reference/objects/resources/images/imageresource)
+\(args [...any](/documentation/reference/typesgo/#any)\) → [Image](/documentation/reference/objects/resources/images/image)
 {.funcsig}
 
 

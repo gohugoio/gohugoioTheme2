@@ -1,0 +1,13 @@
+{{ with .GetTerms "tags" }}
+  <div class="mt-5">
+    {{ range . }}
+      {{ $color := partial "helpers/funcs/color-from-string" .LinkTitle }}
+      {{ $class := printf "text-%s-%d bg-%s-%d" $color.color $color.shade2 $color.color $color.shade1 }}
+      <a
+        href="{{ .RelPermalink }}"
+        class="{{ $class }} text-xs font-semibold no-underline inline-block py-1 px-2 uppercase rounded-full uppercase last:mr-0 mr-1 hover:opacity-75 hover:shadow-md">
+        {{ .LinkTitle | upper }}
+      </a>
+    {{ end }}
+  </div>
+{{ end }}

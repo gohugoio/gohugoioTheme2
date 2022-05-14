@@ -5,11 +5,11 @@
 title: "Site"
 linkTitle: "Site"
 description: "Site is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
 
 
-keywords:
+tags:
 - site
+
 
 weight: 10
 ---
@@ -22,7 +22,7 @@ weight: 10
 
 
 ## Language {#page_site_language}
-\(\) → [langs.Language](/documentation/reference/objects//langs.language)
+\(\) → [Language](/documentation/reference/objects/langs/language)
 {.funcsig}
 
 Returns the `Language` configured for this Site.
@@ -31,7 +31,7 @@ Returns the `Language` configured for this Site.
 
 
 ## RegularPages {#page_site_regularpages}
-\(\) → [Pages](/documentation/reference/objects//pages)
+\(\) → [Pages](/documentation/reference/objects/resources/page/pages)
 {.funcsig}
 
 Returns all the regular Pages in this Site.
@@ -40,7 +40,7 @@ Returns all the regular Pages in this Site.
 
 
 ## Pages {#page_site_pages}
-\(\) → [Pages](/documentation/reference/objects//pages)
+\(\) → [Pages](/documentation/reference/objects/resources/page/pages)
 {.funcsig}
 
 Returns all `Pages` in this Site.
@@ -49,7 +49,7 @@ Returns all `Pages` in this Site.
 
 
 ## Home {#page_site_home}
-\(\) → [Page](/documentation/reference/objects//page)
+\(\) → [Page](/documentation/reference/objects/resources/page/page)
 {.funcsig}
 
 A shortcut to the home page.
@@ -58,7 +58,7 @@ A shortcut to the home page.
 
 
 ## IsServer {#page_site_isserver}
-\(\) → [bool](/documentation/reference/gotypes/#bool)
+\(\) → [bool](/documentation/reference/typesgo/#bool)
 {.funcsig}
 
 Returns true if we're running in a server.
@@ -67,7 +67,7 @@ Returns true if we're running in a server.
 
 
 ## ServerPort {#page_site_serverport}
-\(\) → [int](/documentation/reference/gotypes/#int)
+\(\) → [int](/documentation/reference/typesgo/#int)
 {.funcsig}
 
 Returns the server port.
@@ -76,7 +76,7 @@ Returns the server port.
 
 
 ## Title {#page_site_title}
-\(\) → [string](/documentation/reference/gotypes/#string)
+\(\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 Returns the configured title for this Site.
@@ -85,7 +85,7 @@ Returns the configured title for this Site.
 
 
 ## Sites {#page_site_sites}
-\(\) → [Sites](/documentation/reference/objects//sites)
+\(\) → [Sites](/documentation/reference/objects/resources/page/sites)
 {.funcsig}
 
 Returns all `Sites` for all languages.
@@ -94,7 +94,7 @@ Returns all `Sites` for all languages.
 
 
 ## Current {#page_site_current}
-\(\) → [Site](/documentation/reference/objects//site)
+\(\) → [Site](/documentation/reference/objects/resources/page/site)
 {.funcsig}
 
 Returns Site currently rendering.
@@ -121,7 +121,7 @@ Returns the `BaseURL` for this Site.
 
 
 ## Taxonomies {#page_site_taxonomies}
-\(\) → [any](/documentation/reference/gotypes/#any)
+\(\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 Retuns a taxonomy map.
@@ -130,7 +130,7 @@ Retuns a taxonomy map.
 
 
 ## LastChange {#page_site_lastchange}
-\(\) → [time.Time](/documentation/reference/gotypes/#timetime)
+\(\) → [time.Time](/documentation/reference/typesgo/#timetime)
 {.funcsig}
 
 Returns the last modification date of the content.
@@ -157,7 +157,7 @@ Returns the `Params` configured for this site.
 
 
 ## Data {#page_site_data}
-\(\) → [map[string]any](/documentation/reference/gotypes/#mapstringany)
+\(\) → [map[string]any](/documentation/reference/typesgo/#mapstringany)
 {.funcsig}
 
 Returns a map of all the data inside /data.

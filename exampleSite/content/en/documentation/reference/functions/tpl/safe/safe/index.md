@@ -7,7 +7,7 @@
 title: "safe"
 linkTitle: "safe"
 description: "Safe is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,11 +30,11 @@ hugoSymbol: TODO
 
 ## safe.CSS {#safe_namespace_css}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [CSS](/documentation/reference/objects/html/template/css)
+\(s [any](/documentation/reference/typesgo/#any)\) → [CSS](/documentation/reference/objects/html/template/css)
 {.funcsig}
 
 
-CSS returns `a` given string as html/template CSS content.
+CSS returns the string `s` as html/template CSS content.
 
 {{< docs/func-aliases "safe.CSS" >}}
 {{< docs/func-examples "safe.CSS" >}}
@@ -47,11 +47,11 @@ CSS returns `a` given string as html/template CSS content.
 
 ## safe.HTML {#safe_namespace_html}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [template.HTML](/documentation/reference/gotypes/#templatehtml)
+\(s [any](/documentation/reference/typesgo/#any)\) → [template.HTML](/documentation/reference/typesgo/#templatehtml)
 {.funcsig}
 
 
-HTML returns `a` given string as html/template HTML content.
+HTML returns the string `s` as html/template HTML content.
 
 {{< docs/func-aliases "safe.HTML" >}}
 {{< docs/func-examples "safe.HTML" >}}
@@ -64,11 +64,11 @@ HTML returns `a` given string as html/template HTML content.
 
 ## safe.HTMLAttr {#safe_namespace_htmlattr}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [HTMLAttr](/documentation/reference/objects/html/template/htmlattr)
+\(s [any](/documentation/reference/typesgo/#any)\) → [HTMLAttr](/documentation/reference/objects/html/template/htmlattr)
 {.funcsig}
 
 
-HTMLAttr returns `a` given string as html/template HTMLAttr content.
+HTMLAttr returns the string `s` as html/template HTMLAttr content.
 
 {{< docs/func-aliases "safe.HTMLAttr" >}}
 {{< docs/func-examples "safe.HTMLAttr" >}}
@@ -81,11 +81,11 @@ HTMLAttr returns `a` given string as html/template HTMLAttr content.
 
 ## safe.JS {#safe_namespace_js}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [JS](/documentation/reference/objects/html/template/js)
+\(s [any](/documentation/reference/typesgo/#any)\) → [JS](/documentation/reference/objects/html/template/js)
 {.funcsig}
 
 
-JS returns the given string as `a` html/template JS content.
+JS returns the given string as a html/template JS content.
 
 {{< docs/func-aliases "safe.JS" >}}
 {{< docs/func-examples "safe.JS" >}}
@@ -98,11 +98,11 @@ JS returns the given string as `a` html/template JS content.
 
 ## safe.JSStr {#safe_namespace_jsstr}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [JSStr](/documentation/reference/objects/html/template/jsstr)
+\(s [any](/documentation/reference/typesgo/#any)\) → [JSStr](/documentation/reference/objects/html/template/jsstr)
 {.funcsig}
 
 
-JSStr returns the given string as `a` html/template JSStr content.
+JSStr returns the given string as a html/template JSStr content.
 
 {{< docs/func-aliases "safe.JSStr" >}}
 {{< docs/func-examples "safe.JSStr" >}}
@@ -115,11 +115,11 @@ JSStr returns the given string as `a` html/template JSStr content.
 
 ## safe.SanitizeURL {#safe_namespace_sanitizeurl}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(s [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
-SanitizeURL returns `a` given string as html/template URL content.
+SanitizeURL returns the string `s` as html/template URL content.
 
 {{< docs/func-aliases "safe.SanitizeURL" >}}
 {{< docs/func-examples "safe.SanitizeURL" >}}
@@ -132,11 +132,11 @@ SanitizeURL returns `a` given string as html/template URL content.
 
 ## safe.URL {#safe_namespace_url}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [URL](/documentation/reference/objects/html/template/url)
+\(s [any](/documentation/reference/typesgo/#any)\) → [URL](/documentation/reference/objects/html/template/url)
 {.funcsig}
 
 
-URL returns `a` given string as html/template URL content.
+URL returns the string `s` as html/template URL content.
 
 {{< docs/func-aliases "safe.URL" >}}
 {{< docs/func-examples "safe.URL" >}}

@@ -10,8 +10,15 @@
   @apply text-blue-700 hover:text-steel-500 no-underline;
 }
 
+#TableOfContents ul {
+  @apply text-base;
+
+}
+
 #TableOfContents ul ul {
-  @apply ml-0 pl-3;
+  @apply text-sm;
+  margin-top: 0.035rem;
+  margin-bottom: 0.5rem;
 
 }
 

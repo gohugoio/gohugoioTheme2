@@ -7,7 +7,7 @@
 title: "templates"
 linkTitle: "templates"
 description: "Templates is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## templates.Exists {#templates_namespace_exists}
 
-\(name [string](/documentation/reference/gotypes/#string)\) → [bool](/documentation/reference/gotypes/#bool)
+\(name [string](/documentation/reference/typesgo/#string)\) → [bool](/documentation/reference/typesgo/#bool)
 {.funcsig}
 
 

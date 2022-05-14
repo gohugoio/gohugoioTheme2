@@ -7,7 +7,7 @@
 title: "crypto"
 linkTitle: "crypto"
 description: "Crypto is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## crypto.FNV32a {#crypto_namespace_fnv32a}
 
-\(in [any](/documentation/reference/gotypes/#any)\) → [int](/documentation/reference/gotypes/#int)
+\(in [any](/documentation/reference/typesgo/#any)\) → [int](/documentation/reference/typesgo/#int)
 {.funcsig}
 
 
@@ -47,7 +47,7 @@ FNV32a hashes using fnv32a algorithm
 
 ## crypto.HMAC {#crypto_namespace_hmac}
 
-\(h [any](/documentation/reference/gotypes/#any), k [any](/documentation/reference/gotypes/#any), m [any](/documentation/reference/gotypes/#any), e [...any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(h [any](/documentation/reference/typesgo/#any), k [any](/documentation/reference/typesgo/#any), m [any](/documentation/reference/typesgo/#any), e [...any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -64,7 +64,7 @@ HMAC returns a cryptographic hash that uses a key to sign a message.
 
 ## crypto.MD5 {#crypto_namespace_md5}
 
-\(in [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(in [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -81,7 +81,7 @@ MD5 hashes the given input and returns its MD5 checksum.
 
 ## crypto.SHA1 {#crypto_namespace_sha1}
 
-\(in [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(in [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 
@@ -98,7 +98,7 @@ SHA1 hashes the given input and returns its SHA1 checksum.
 
 ## crypto.SHA256 {#crypto_namespace_sha256}
 
-\(in [any](/documentation/reference/gotypes/#any)\) → [string](/documentation/reference/gotypes/#string)
+\(in [any](/documentation/reference/typesgo/#any)\) → [string](/documentation/reference/typesgo/#string)
 {.funcsig}
 
 

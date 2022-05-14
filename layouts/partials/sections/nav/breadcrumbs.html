@@ -18,7 +18,7 @@
   {{ end }}
   <li>
     <div class="flex items-center">
-      {{ if or .p1.IsNode (ne .p1 .p2) }}
+      {{ if ne .p1 .p2 }}
         {{ if ne .p1 .root }}
           {{ template "breadcrumbs-arrow" . }}
         {{ end }}

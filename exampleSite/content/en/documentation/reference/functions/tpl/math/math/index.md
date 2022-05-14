@@ -7,7 +7,7 @@
 title: "math"
 linkTitle: "math"
 description: "Math is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,11 +30,11 @@ hugoSymbol: TODO
 
 ## math.Add {#math_namespace_add}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(n1, n2 [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
-Add adds two numbers.
+Add adds the two addends `n1` and `n2`.
 
 {{< docs/func-aliases "math.Add" >}}
 {{< docs/func-examples "math.Add" >}}
@@ -47,11 +47,11 @@ Add adds two numbers.
 
 ## math.Ceil {#math_namespace_ceil}
 
-\(x [any](/documentation/reference/gotypes/#any)\) → [float](/documentation/reference/gotypes/#float)
+\(n [any](/documentation/reference/typesgo/#any)\) → [float](/documentation/reference/typesgo/#float)
 {.funcsig}
 
 
-Ceil returns the least integer value greater than or equal to `x`.
+Ceil returns the least integer value greater than or equal to `n`.
 
 {{< docs/func-aliases "math.Ceil" >}}
 {{< docs/func-examples "math.Ceil" >}}
@@ -64,7 +64,7 @@ Ceil returns the least integer value greater than or equal to `x`.
 
 ## math.Counter {#math_namespace_counter}
 
-\(\) → [uint64](/documentation/reference/gotypes/#uint64)
+\(\) → [uint64](/documentation/reference/typesgo/#uint64)
 {.funcsig}
 
 
@@ -85,11 +85,11 @@ and the counter will reset on new builds.
 
 ## math.Div {#math_namespace_div}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(n1, n2 [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
-Div divides two numbers.
+Div divides `n1` by `n2`.
 
 {{< docs/func-aliases "math.Div" >}}
 {{< docs/func-examples "math.Div" >}}
@@ -102,11 +102,11 @@ Div divides two numbers.
 
 ## math.Floor {#math_namespace_floor}
 
-\(x [any](/documentation/reference/gotypes/#any)\) → [float](/documentation/reference/gotypes/#float)
+\(n [any](/documentation/reference/typesgo/#any)\) → [float](/documentation/reference/typesgo/#float)
 {.funcsig}
 
 
-Floor returns the greatest integer value less than or equal to `x`.
+Floor returns the greatest integer value less than or equal to `n`.
 
 {{< docs/func-aliases "math.Floor" >}}
 {{< docs/func-examples "math.Floor" >}}
@@ -119,11 +119,11 @@ Floor returns the greatest integer value less than or equal to `x`.
 
 ## math.Log {#math_namespace_log}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [float](/documentation/reference/gotypes/#float)
+\(n [any](/documentation/reference/typesgo/#any)\) → [float](/documentation/reference/typesgo/#float)
 {.funcsig}
 
 
-Log returns the natural logarithm of `a` number.
+Log returns the natural logarithm of the number `n`.
 
 {{< docs/func-aliases "math.Log" >}}
 {{< docs/func-examples "math.Log" >}}
@@ -136,11 +136,11 @@ Log returns the natural logarithm of `a` number.
 
 ## math.Max {#math_namespace_max}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [float](/documentation/reference/gotypes/#float)
+\(n1, n2 [any](/documentation/reference/typesgo/#any)\) → [float](/documentation/reference/typesgo/#float)
 {.funcsig}
 
 
-Max returns the greater of two numbers.
+Max returns the greater of the two numbers `n1` or `n2`.
 
 {{< docs/func-aliases "math.Max" >}}
 {{< docs/func-examples "math.Max" >}}
@@ -153,11 +153,11 @@ Max returns the greater of two numbers.
 
 ## math.Min {#math_namespace_min}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [float](/documentation/reference/gotypes/#float)
+\(n1, n2 [any](/documentation/reference/typesgo/#any)\) → [float](/documentation/reference/typesgo/#float)
 {.funcsig}
 
 
-Min returns the smaller of two numbers.
+Min returns the smaller of two numbers `n1` or `n2`.
 
 {{< docs/func-aliases "math.Min" >}}
 {{< docs/func-examples "math.Min" >}}
@@ -170,11 +170,11 @@ Min returns the smaller of two numbers.
 
 ## math.Mod {#math_namespace_mod}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [int64](/documentation/reference/gotypes/#int64)
+\(n1, n2 [any](/documentation/reference/typesgo/#any)\) → [int64](/documentation/reference/typesgo/#int64)
 {.funcsig}
 
 
-Mod returns `a` % b.
+Mod returns `n1` % `n2`.
 
 {{< docs/func-aliases "math.Mod" >}}
 {{< docs/func-examples "math.Mod" >}}
@@ -187,11 +187,11 @@ Mod returns `a` % b.
 
 ## math.ModBool {#math_namespace_modbool}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [bool](/documentation/reference/gotypes/#bool)
+\(n1, n2 [any](/documentation/reference/typesgo/#any)\) → [bool](/documentation/reference/typesgo/#bool)
 {.funcsig}
 
 
-ModBool returns the boolean of `a` % b.  If `a` % b == 0, return true.
+ModBool returns the boolean of `n1` % `n2`.  If `n1` % `n2` == 0, return true.
 
 {{< docs/func-aliases "math.ModBool" >}}
 {{< docs/func-examples "math.ModBool" >}}
@@ -204,11 +204,11 @@ ModBool returns the boolean of `a` % b.  If `a` % b == 0, return true.
 
 ## math.Mul {#math_namespace_mul}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(n1, n2 [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
-Mul multiplies two numbers.
+Mul multiplies the two numbers `n1` and `n2`.
 
 {{< docs/func-aliases "math.Mul" >}}
 {{< docs/func-examples "math.Mul" >}}
@@ -221,11 +221,11 @@ Mul multiplies two numbers.
 
 ## math.Pow {#math_namespace_pow}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [float](/documentation/reference/gotypes/#float)
+\(n1, n2 [any](/documentation/reference/typesgo/#any)\) → [float](/documentation/reference/typesgo/#float)
 {.funcsig}
 
 
-Pow returns `a` raised to the power of b.
+Pow returns `n1` raised to the power of `n2`.
 
 {{< docs/func-aliases "math.Pow" >}}
 {{< docs/func-examples "math.Pow" >}}
@@ -238,11 +238,11 @@ Pow returns `a` raised to the power of b.
 
 ## math.Round {#math_namespace_round}
 
-\(x [any](/documentation/reference/gotypes/#any)\) → [float](/documentation/reference/gotypes/#float)
+\(n [any](/documentation/reference/typesgo/#any)\) → [float](/documentation/reference/typesgo/#float)
 {.funcsig}
 
 
-Round returns the nearest integer, rounding half away from zero.
+Round returns the integer nearest to `n`, rounding half away from zero.
 
 {{< docs/func-aliases "math.Round" >}}
 {{< docs/func-examples "math.Round" >}}
@@ -255,11 +255,11 @@ Round returns the nearest integer, rounding half away from zero.
 
 ## math.Sqrt {#math_namespace_sqrt}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [float](/documentation/reference/gotypes/#float)
+\(n [any](/documentation/reference/typesgo/#any)\) → [float](/documentation/reference/typesgo/#float)
 {.funcsig}
 
 
-Sqrt returns the square root of `a` number.
+Sqrt returns the square root of the number `n`.
 
 {{< docs/func-aliases "math.Sqrt" >}}
 {{< docs/func-examples "math.Sqrt" >}}
@@ -272,11 +272,11 @@ Sqrt returns the square root of `a` number.
 
 ## math.Sub {#math_namespace_sub}
 
-\(a [any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(n1, n2 [any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
-Sub subtracts two numbers.
+Sub subtracts `n2` from `n1`.
 
 {{< docs/func-aliases "math.Sub" >}}
 {{< docs/func-examples "math.Sub" >}}

@@ -7,7 +7,7 @@
 title: "partials"
 linkTitle: "partials"
 description: "Partials is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-hugoSymbol: TODO
+
 
 
 
@@ -30,7 +30,7 @@ hugoSymbol: TODO
 
 ## partials.Include {#partials_namespace_include}
 
-\(name [string](/documentation/reference/gotypes/#string), contextList [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(name [string](/documentation/reference/typesgo/#string), contextList [...any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
@@ -51,7 +51,7 @@ Note that ctx is provided by Hugo, not the end user.
 
 ## partials.IncludeCached {#partials_namespace_includecached}
 
-\(name [string](/documentation/reference/gotypes/#string), context [any](/documentation/reference/gotypes/#any), variants [...any](/documentation/reference/gotypes/#any)\) → [any](/documentation/reference/gotypes/#any)
+\(name [string](/documentation/reference/typesgo/#string), context [any](/documentation/reference/typesgo/#any), variants [...any](/documentation/reference/typesgo/#any)\) → [any](/documentation/reference/typesgo/#any)
 {.funcsig}
 
 
