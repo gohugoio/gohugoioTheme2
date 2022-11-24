@@ -35,8 +35,8 @@ import focus from "jslibs/alpinejs/v3/focus/dist/module.esm.js";
     // Register AlpineJS data controllers.
     let searchConfig = {
       index: "hugodocs",
-      app_id: "BH4D9OD16A",
-      api_key: "167e7998590aebda7f9fedcf86bc4a55",
+      app_id: "D1BPLZHGYQ",
+      api_key: "6df94e1e5d55d258c56f60d974d10314",
     };
 
     Alpine.data("docTreeController", () => newDocTreeController());
